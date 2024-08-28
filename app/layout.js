@@ -1,4 +1,6 @@
 import ChakraProviderUI from "@/components/providers/ChakraProviderUI";
+import Header from "@/components/ui/Header";
+import { Container } from "@chakra-ui/react";
 
 export const metadata = {
   title: "LANDING PAGE - RafaelaSoftware",
