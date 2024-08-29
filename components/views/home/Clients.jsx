@@ -36,12 +36,16 @@ export default function Clients() {
               _hover={{
                 filter: "grayscale(0%)",
               }}
+              display={"grid"}
+              placeContent={"center"}
             >
               <img
                 src={client.src}
                 alt={`Logotipo de ${client.name}`}
-                width={"300px"}
-                height={"200px"}
+                maxWidth={"300px"}
+                width={"100%"}
+                maxHeight={"200px"}
+                height={"100%"}
               />
             </GridItem>
           ))}
