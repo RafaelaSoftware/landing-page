@@ -6,7 +6,7 @@ import {
   Flex,
   Link,
 } from "@chakra-ui/react";
-import Image from "next/image";
+import Logo from "@/components/ui/Logo";
 
 export default function Header() {
   return (
@@ -17,14 +17,7 @@ export default function Header() {
           alignItems={"center"}
           height={"140px"}
         >
-          <Box>
-            <Image
-              src={"/images/logo.png"}
-              alt="Next.js Logo"
-              width={200}
-              height={200}
-            />
-          </Box>
+          <Logo />
 
           <Box>
             {/* Desktop */}

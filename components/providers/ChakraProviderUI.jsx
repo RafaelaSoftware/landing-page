@@ -6,8 +6,8 @@ import { primary } from "@/theme/foundations/fonts";
 import theme from "@/theme";
 
 import { CacheProvider } from "@chakra-ui/next-js";
-import Header from "../ui/Header";
-import Footer from "../ui/Footer";
+import Header from "@/components/ui/layout/Header";
+import Footer from "@/components/ui/layout/Footer";
 
 export default function ChakraProviderUI({ children }) {
   return (

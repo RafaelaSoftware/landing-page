@@ -3,7 +3,7 @@ import TitleSection from "@/components/ui/TitleSection";
 
 const clientImages = [
   { name: "BolsaFilm - BLF", src: "/images/clients/bolsafilm.png" },
-  { name: "Comasa", src: "/images/clients/comasa.png" },
+  { name: "Comasa", src: "/images/clients/comasa.jpg" },
   { name: "Sodecar", src: "/images/clients/sodecar.png" },
   { name: "Faben ", src: "/images/clients/faben.jpg" },
   { name: "Fexa", src: "/images/clients/fexa.png" },
@@ -25,7 +25,7 @@ export default function Clients() {
     <Box minHeight={"calc(100vh - 140px)"} id="clientes">
       <TitleSection>Clientes</TitleSection>
 
-      <Container maxW={"container.lg"}>
+      <Container maxW={"container.xl"}>
         <Grid templateColumns={`repeat(3, 1fr)`} gap={4}>
           {clientImages.map((client) => (
             <GridItem
