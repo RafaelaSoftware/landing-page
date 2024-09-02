@@ -1,5 +1,6 @@
 import { Box, Container, Grid, GridItem } from "@chakra-ui/react";
 import TitleSection from "@/components/ui/TitleSection";
+import Image from "next/image";
 
 const clientImages = [
   { name: "BolsaFilm - BLF", src: "/images/clients/bolsafilm.png" },
@@ -39,18 +40,22 @@ export default function Clients() {
               _hover={{
                 filter: "grayscale(0%)",
               }}
-              width={"100%"}
-              height={"150px"}
               display={"flex"}
               justifyContent={"center"}
               alignItems={"center"}
+              width={"100%"}
             >
-              <img
-                src={client.src}
-                alt={`Logotipo de ${client.name}`}
-                maxWidth={"150px"}
-                maxHeight={"100px"}
-              />
+              <Box maxWidth={"150px"} maxHeight={"150px"}>
+                <Image
+                  src={client.src}
+                  alt={`Logotipo de ${client.name}`}
+                  width={0}
+                  height={0}
+                  sizes="100%"
+                  objectFit="contain"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </Box>
             </GridItem>
           ))}
         </Grid>

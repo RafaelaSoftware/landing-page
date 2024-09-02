@@ -8,6 +8,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import Image from "next/image";
 
 export default function AboutUs() {
   return (
@@ -31,10 +32,16 @@ export default function AboutUs() {
               alignItems={"center"}
               height={"100%"}
             >
-              <img
+              <Image
                 src="/images/fotografia-logo.jpg"
-                height={"100%"}
-                width={"100%"}
+                alt="Rafaela Software S.A."
+                width={0}
+                height={0}
+                sizes="100%"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
               />
             </Box>
           </GridItem>

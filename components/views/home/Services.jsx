@@ -10,6 +10,7 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
+import Image from "next/image";
 
 export default function Services() {
   function ServicesArticle({
@@ -70,10 +71,13 @@ export default function Services() {
         <Container maxW={"container.xl"} py={10}>
           <Grid templateColumns={{ base: "1f", md: "1fr 1fr" }}>
             <GridItem order={{ base: 1, md: isLeft ? 1 : 2 }}>
-              <img
-                src="https://fakeimg.pl/600x400?text=placeholder"
-                width={"100%"}
-                height={"100%"}
+              <Image
+                src="/images/placeholder.png"
+                alt="Rafaela Software S.A. - Servicios"
+                width={0}
+                height={0}
+                sizes="100%"
+                style={{ width: "100%", height: "auto" }}
               />
             </GridItem>
             <GridItem
@@ -130,10 +134,11 @@ export default function Services() {
                 transform={"translateX(-20px)"}
                 fontSize={"40px"}
               >
-                <img
+                <Image
                   src="/images/iconos/icono-info.svg"
-                  height={"60px"}
-                  width={"60px"}
+                  alt="Icono de WhatsApp - Quiero solicitar demo"
+                  height={60}
+                  width={60}
                 />
               </Box>
               {btnLabel}

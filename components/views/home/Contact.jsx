@@ -11,6 +11,7 @@ import FormContact from "@/components/ui/forms/FormContact";
 import { FaWhatsapp } from "react-icons/fa6";
 import Link from "next/link";
 import { NUMBER_WHATAPP } from "@/enums/config";
+import Image from "next/image";
 
 export default function Contact() {
   return (
@@ -22,29 +23,34 @@ export default function Contact() {
             <FormContact />
           </GridItem>
           <GridItem bgColor={"primary"}>
-            <VStack
-              height={"100%"}
-              color="#6cc06f"
-              justifyContent={"center"}
-              alignItems={"center"}
+            <Link
+              href={`https://wa.me/${NUMBER_WHATAPP}`}
+              textDecoration={"underline"}
+              isExternal
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Link
-                href={`https://wa.me/${NUMBER_WHATAPP}`}
-                textDecoration={"underline"}
-                isExternal
-                target="_blank"
-                rel="noopener noreferrer"
+              <VStack
+                height={"100%"}
+                color="#6cc06f"
+                justifyContent={"center"}
+                alignItems={"center"}
               >
-                <img
-                  src="images/iconos/icono-whatsapp.png"
-                  width={"200px"}
-                  height={"200px"}
-                />
-              </Link>
-              <Heading as={"h4"} color={"white"}>
-                ¡Hablá con nosotros!
-              </Heading>
-            </VStack>
+                <Box maxW={"200px"} maxHeight={"200px"}>
+                  <Image
+                    src={"/images/iconos/icono-whatsapp.png"}
+                    alt="Icono de Whatsapp"
+                    width={0}
+                    height={0}
+                    sizes="100%"
+                    style={{ width: "100%", height: "auto" }}
+                  />
+                </Box>
+                <Heading as={"h4"} color={"white"}>
+                  ¡Hablá con nosotros!
+                </Heading>
+              </VStack>
+            </Link>
           </GridItem>
         </Grid>
       </Container>
