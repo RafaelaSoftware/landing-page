@@ -1,22 +1,34 @@
+"use client";
 import {
   Box,
   Button,
   ButtonGroup,
   Container,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
   Flex,
   Grid,
   GridItem,
   Link,
   useBreakpointValue,
+  useDisclosure,
 } from "@chakra-ui/react";
 import Logo from "@/components/ui/Logo";
 import { FaBars } from "react-icons/fa6";
+import { useRef } from "react";
 
 export default function Header() {
-  const isMobile = useBreakpointValue({
-    base: true,
-    md: false,
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const isDesktop = useBreakpointValue({
+    base: false,
+    md: true,
   });
+  const btnRef = useRef();
 
   return (
     <Box
@@ -45,11 +57,7 @@ export default function Header() {
               justifyContent={"flex-end"}
               alignItems={"center"}
             >
-              {isMobile ? (
-                <Button>
-                  <FaBars />
-                </Button>
-              ) : (
+              {isDesktop ? (
                 <ButtonGroup gap={2} color={"secondary"} fontWeight={"bold"}>
                   <Link href="#inicio" variant={"link"}>
                     Inicio
@@ -67,6 +75,27 @@ export default function Header() {
                     Contacto
                   </Link>
                 </ButtonGroup>
+              ) : (
+                <>
+                  <Button onClick={onOpen}>
+                    <FaBars />
+                  </Button>
+
+                  <Drawer
+                    isOpen={isOpen}
+                    placement="right"
+                    onClose={onClose}
+                    finalFocusRef={btnRef}
+                  >
+                    <DrawerOverlay />
+                    <DrawerContent>
+                      <DrawerCloseButton />
+                      <DrawerHeader>Rafaela Software</DrawerHeader>
+
+                      <DrawerBody>hola!</DrawerBody>
+                    </DrawerContent>
+                  </Drawer>
+                </>
               )}
             </Box>
           </GridItem>
