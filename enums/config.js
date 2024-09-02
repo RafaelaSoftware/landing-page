@@ -1,5 +1,5 @@
 module.exports = {
-    EMAIL_TO: process.env.EMAIL_TO,
-    NUMBER_WHATAPP: process.env.NUMBER_WHATAPP,
-    LINK_IG: process.env.LINK_IG,
+    EMAIL_TO: "info@rafaelasoftware.com.ar",
+    NUMBER_WHATAPP: 5493492695991,
+    LINK_IG: "https://www.instagram.com/rafaelasoftware/",
 }
