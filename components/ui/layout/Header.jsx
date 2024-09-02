@@ -4,6 +4,8 @@ import {
   ButtonGroup,
   Container,
   Flex,
+  Grid,
+  GridItem,
   Link,
   useBreakpointValue,
 } from "@chakra-ui/react";
@@ -23,45 +25,52 @@ export default function Header() {
       top={0}
       right={0}
       zIndex={100}
+      bg={"tertiary"}
     >
       <Container maxW={"container.xl"}>
-        <Flex
-          justifyContent={"space-between"}
-          alignItems={"center"}
-          height={"140px"}
-        >
-          <Logo />
-
-          <Box>
-            {isMobile ? (
-              <>
+        <Grid templateColumns={"260px 1fr"} height={"100px"}>
+          <GridItem
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            height={"100%"}
+          >
+            <Logo />
+          </GridItem>
+          <GridItem>
+            <Box
+              width={"100%"}
+              height={"100%"}
+              display={"flex"}
+              justifyContent={"flex-end"}
+              alignItems={"center"}
+            >
+              {isMobile ? (
                 <Button>
                   <FaBars />
                 </Button>
-              </>
-            ) : (
-              <ButtonGroup gap={2} color={"primary"} fontWeight={"bold"}>
-                {/* Desktop */}
-                <Link href="#inicio" variant={"link"}>
-                  Inicio
-                </Link>
-                <Link href="#nosotros" variant={"link"}>
-                  Sobre Nosotros
-                </Link>
-
-                <Link href="#servicios" variant={"link"}>
-                  Servicios
-                </Link>
-                <Link href="#clientes" variant={"link"}>
-                  Casos de Éxito
-                </Link>
-                <Link href="#contacto" variant={"link"}>
-                  Contacto
-                </Link>
-              </ButtonGroup>
-            )}
-          </Box>
-        </Flex>
+              ) : (
+                <ButtonGroup gap={2} color={"secondary"} fontWeight={"bold"}>
+                  <Link href="#inicio" variant={"link"}>
+                    Inicio
+                  </Link>
+                  <Link href="#nosotros" variant={"link"}>
+                    Sobre Nosotros
+                  </Link>
+                  <Link href="#servicios" variant={"link"}>
+                    Servicios
+                  </Link>
+                  <Link href="#clientes" variant={"link"}>
+                    Clientes
+                  </Link>
+                  <Link href="#contacto" variant={"link"}>
+                    Contacto
+                  </Link>
+                </ButtonGroup>
+              )}
+            </Box>
+          </GridItem>
+        </Grid>
       </Container>
     </Box>
   );

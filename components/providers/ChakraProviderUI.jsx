@@ -25,8 +25,10 @@ export default function ChakraProviderUI({ children }) {
           h3,
           h4,
           h5,
-          h6 {
+          h6,
+          p {
             font-family: var(--font-primary) !important;
+            color: #3c3c3c;
           }
         `}
       </style>

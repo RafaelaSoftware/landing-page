@@ -35,7 +35,11 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaWhatsapp fontSize={"128px"} />
+                <img
+                  src="images/iconos/icono-whatsapp.png"
+                  width={"200px"}
+                  height={"200px"}
+                />
               </Link>
               <Heading as={"h4"} color={"white"}>
                 ¡Hablá con nosotros!

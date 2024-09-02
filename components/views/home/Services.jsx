@@ -8,11 +8,8 @@ import {
   Grid,
   GridItem,
   Heading,
-  Link,
   Text,
-  VStack,
 } from "@chakra-ui/react";
-import { FaWhatsapp } from "react-icons/fa6";
 
 export default function Services() {
   function ServicesArticle({
@@ -43,7 +40,7 @@ export default function Services() {
           <Text
             textAlign={isLeft ? "right" : "left"}
             transform={isLeft ? "skew(-20deg)" : "skew(20deg)"}
-            color={"primary"}
+            color={"secondary"}
             fontWeight={"bold"}
           >
             {children}
@@ -63,8 +60,8 @@ export default function Services() {
       );
     }
     return (
-      <Box minHeight={"calc(100vh - 140px)"}>
-        <Center bgColor={"secondary"} height={"70px"}>
+      <Box minHeight={"calc(100vh - 100px)"}>
+        <Center bgColor={"secondary"} height={"60px"}>
           <Heading as={"h3"} color={"white"} fontSize={"2xl"}>
             {title}
           </Heading>
@@ -93,8 +90,9 @@ export default function Services() {
               <Box>
                 <Heading
                   as={"h4"}
-                  fontSize={"lg"}
+                  fontSize={"md"}
                   my={2}
+                  fontWeight={"normal"}
                   width={"full"}
                   textAlign={isLeft ? "right" : "left"}
                 >
@@ -117,22 +115,26 @@ export default function Services() {
 
           <Center mt={10}>
             <Button
-              bgColor={"#6cc06f"}
+              bgColor={"#75ba63"}
               color={"white"}
               pl={8}
               position={"relative"}
               _hover={{
-                bgColor: "#52c356",
+                transform: "translateY(-2px)",
               }}
               borderRadius={2}
             >
               <Box
                 position={"absolute"}
-                left={0}
+                left={-4}
                 transform={"translateX(-20px)"}
                 fontSize={"40px"}
               >
-                <FaWhatsapp />
+                <img
+                  src="/images/iconos/icono-info.svg"
+                  height={"60px"}
+                  width={"60px"}
+                />
               </Box>
               {btnLabel}
             </Button>
@@ -143,9 +145,8 @@ export default function Services() {
   }
 
   return (
-    <Box minHeight={"calc(100vh - 140px)"} id="servicios">
+    <Box minHeight={"calc(100vh - 100px)"} id="servicios">
       <TitleSection>Servicios</TitleSection>
-      <Box mt={4} />
       <ServicesArticle
         title={"Implementación ERP Calipso Corporate"}
         description={
@@ -163,6 +164,7 @@ export default function Services() {
             </Text>
           </>
         }
+        subtitle={"¿Cuáles son los beneficios de esta unión?"}
         benefits={[
           "Acceso a una gran variedad de soluciones tecnológicas",
           "Profesionales altamente calificados para su modelo de negocio",
@@ -190,7 +192,7 @@ export default function Services() {
             </Text>
           </>
         }
-        subtitle={"¿Cuáles son los beneficios de implementar MES con nosotros?"}
+        subtitle={"¿Cuáles son los beneficios del sistema MES?"}
         benefits={[
           "Medir los costos de producción sin la posibilidad de error humano",
           "Calcular el rendimiento de cada unidad productiva",
@@ -218,9 +220,7 @@ export default function Services() {
             </Text>
           </>
         }
-        subtitle={
-          "¿Cuáles son los beneficios de incorporar servicios a medida para tu empresa?"
-        }
+        subtitle={"¿Cuáles son los beneficios de un software a medida?"}
         benefits={[
           "100% ajustable a tus necesidades, adaptable a sistemas ya existentes",
           "Flexibilidad de cambio, ampliación o ajustes sobre el soft funcionando",

@@ -1,21 +1,4 @@
-import {
-  Box,
-  Button,
-  ButtonGroup,
-  Container,
-  Divider,
-  Flex,
-  Grid,
-  GridItem,
-  HStack,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
-import { BsGeoAlt, BsTelephone } from "react-icons/bs";
-import { MdOutlineEmail } from "react-icons/md";
-import Logo from "@/components/ui/Logo";
-import SocialButton from "../SocialButton";
+import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react";
 
 export default function Footer() {
   return (
@@ -30,19 +13,27 @@ export default function Footer() {
           height={"100%"}
         >
           <HStack>
-            <BsGeoAlt />
+            <Box width={"30px"} height={"30px"}>
+              <img src="/images/iconos/icono-dirreccion.svg" />
+            </Box>
             <Text>Las Araucarias 1520, Rafaela, Santa Fe, ARG.</Text>
           </HStack>
           <HStack>
-            <FaInstagram />
+            <Box width={"30px"} height={"30px"}>
+              <img src="/images/iconos/icono-instagram.svg" />
+            </Box>
             <Text>@rafaelasoftware</Text>
           </HStack>
           <HStack>
-            <MdOutlineEmail />
+            <Box width={"30px"} height={"30px"}>
+              <img src="/images/iconos/icono-mail.svg" />
+            </Box>
             <Text>info@rafaelasoftware.com.ar</Text>
           </HStack>
           <HStack>
-            <FaWhatsapp />
+            <Box width={"30px"} height={"30px"}>
+              <img src="/images/iconos/icono-telefono.svg" />
+            </Box>
             <Text>+54 3492 695991</Text>
           </HStack>
         </Flex>

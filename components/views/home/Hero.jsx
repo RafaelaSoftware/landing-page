@@ -4,10 +4,10 @@ export default function Hero() {
   return (
     <VStack
       id="inicio"
-      minHeight={"calc(100vh - 140px)"}
+      minHeight={"calc(100vh - 100px)"}
       alignContent={"center"}
       justifyContent={"center"}
-      backgroundImage={"url(./images/hero.jpg)"}
+      backgroundImage={"url(./images/hero.jpeg)"}
       backgroundPosition={"center center"}
       backgroundSize={"cover"}
       backgroundRepeat={"no-repeat"}

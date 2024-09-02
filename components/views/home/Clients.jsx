@@ -12,22 +12,22 @@ const clientImages = [
   { name: "Grana", src: "/images/clients/grana.jpg" },
   { name: "Omarsa", src: "/images/clients/omarsa.png" },
   { name: "300 Indy", src: "/images/clients/300indy.png" },
-  { name: "Escorial", src: "/images/clients/escorial.png" },
-  { name: "RQS", src: "/images/clients/rqs-sa.png" },
+  { name: "Escorial", src: "/images/clients/escorial.jpeg" },
+  { name: "RQS", src: "/images/clients/rqs-sa.jpeg" },
   { name: "VMC", src: "/images/clients/vmc.png" },
   { name: "FrioRaf", src: "/images/clients/frio-raf.png" },
   { name: "Panamá Seafood", src: "/images/clients/panamaSeafood.png" },
-  { name: "Exportquilsa", src: "/images/clients/exportquilsa.png" },
+  { name: "Exportquilsa", src: "/images/clients/exportquilsa.jpeg" },
 ];
 
 export default function Clients() {
   return (
-    <Box minHeight={"calc(100vh - 140px)"} id="clientes">
+    <Box minHeight={"calc(100vh - 100px)"} id="clientes">
       <TitleSection>Clientes</TitleSection>
 
       <Container maxW={"container.lg"}>
         <Grid
-          templateColumns={{ base: "1fr 1fr", md: `repeat(3, 1fr)` }}
+          templateColumns={{ base: "1fr 1fr", md: `repeat(4, 1fr)` }}
           gap={4}
         >
           {clientImages.map((client) => (
@@ -39,16 +39,17 @@ export default function Clients() {
               _hover={{
                 filter: "grayscale(0%)",
               }}
-              display={"grid"}
-              placeContent={"center"}
+              width={"100%"}
+              height={"150px"}
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
             >
               <img
                 src={client.src}
                 alt={`Logotipo de ${client.name}`}
-                maxWidth={"300px"}
-                width={"100%"}
-                maxHeight={"200px"}
-                height={"100%"}
+                maxWidth={"150px"}
+                maxHeight={"100px"}
               />
             </GridItem>
           ))}
