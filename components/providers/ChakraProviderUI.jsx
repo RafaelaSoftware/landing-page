@@ -17,6 +17,9 @@ export default function ChakraProviderUI({ children }) {
           :root {
             --font-primary: ${primary.style.fontFamily};
           }
+          html {
+            scroll-behavior: smooth;
+          }
           body {
             font-family: var(--font-primary) !important;
           }
