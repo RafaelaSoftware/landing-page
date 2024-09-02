@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@chakra-ui/react";
 
 export default function SocialButton({ children, href }) {
@@ -19,7 +20,6 @@ export default function SocialButton({ children, href }) {
         bg: "whiteAlpha.400",
       }}
       fontSize={"xl"}
-      color="white"
       target="_blank"
       rel="noopener noreferrer"
     >

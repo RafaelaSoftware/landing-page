@@ -1,5 +1,13 @@
 import TitleSection from "@/components/ui/TitleSection";
-import { Box, Center, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Grid,
+  GridItem,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 
 export default function AboutUs() {
   return (
@@ -10,21 +18,45 @@ export default function AboutUs() {
       minHeight={"calc(100vh - 140px)"}
     >
       <TitleSection>Sobre Nosotros</TitleSection>
-
-      <Flex flex={1}>
-        <Box width={"40%"}>
-          <img src="/images/fotografia-logo.jpg" />
-        </Box>
-        <Box width={"60%"} paddingX={4}>
-          <VStack>
+      {/* <Container maxWidth={"container.xl"} overflow={"visible"} pl={0}> */}
+      <Grid
+        templateColumns={{ base: "1fr", md: "1fr 1.4fr" }}
+        height={"100%"}
+        flexGrow={{ base: 0, md: 1 }}
+      >
+        <GridItem>
+          <Box
+            // ml={-"40px"}
+            // bgImage={"url(/images/fotografia-logo.jpg)"}
+            // bgSize={"contain"}
+            // bgRepeat={"no-repeat"}
+            // bgPosition={"center center"}
+            // height={"100%"}
+            // zIndex={10}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            height={"100%"}
+          >
+            <img
+              src="/images/fotografia-logo.jpg"
+              height={"100%"}
+              width={"100%"}
+            />
+          </Box>
+        </GridItem>
+        <GridItem padding={4} display={"flex"} alignItems={"center"} pr={4}>
+          <VStack alignItems={"flex-start"}>
+            <Text fontWeight={"bold"}>
+              Rafaela Software S.A.: lo que necesites podemos hacerlo juntos
+            </Text>
             <Text textAlign={"justify"}>
-              En Rafaela Software S.A., somos líderes en la provisión de
-              soluciones tecnológicas avanzadas, diseñadas específicamente para
-              optimizar y revolucionar procesos y gestiones industriales
-              integrales. Nuestro enfoque abarca sectores vitales como el
-              alimenticio, el metalúrgico, la industria del packaging y los
-              envases, como así también el sector de la construcción y la
-              industria química.
+              En RS somos líderes en la provisión de soluciones tecnológicas
+              avanzadas, diseñadas específicamente para optimizar y revolucionar
+              procesos y gestiones industriales integrales. Nuestro enfoque
+              abarca sectores vitales como el alimenticio, el metalúrgico, la
+              industria del packaging y los envases, como así también el sector
+              de la construcción y la industria química.
             </Text>
 
             <Text textAlign={"justify"}>
@@ -40,8 +72,9 @@ export default function AboutUs() {
               procesos industriales y soluciones personalizadas.
             </Text>
           </VStack>
-        </Box>
-      </Flex>
+        </GridItem>
+      </Grid>
+      {/* </Container> */}
     </Flex>
   );
 }

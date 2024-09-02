@@ -5,12 +5,25 @@ import {
   Container,
   Flex,
   Link,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import Logo from "@/components/ui/Logo";
+import { FaBars } from "react-icons/fa6";
 
 export default function Header() {
+  const isMobile = useBreakpointValue({
+    base: true,
+    md: false,
+  });
+
   return (
-    <Box bgColor={"primary"} position={"sticky"} top={0} right={0} zIndex={100}>
+    <Box
+      bgColor={"tertiary"}
+      position={"sticky"}
+      top={0}
+      right={0}
+      zIndex={100}
+    >
       <Container maxW={"container.xl"}>
         <Flex
           justifyContent={"space-between"}
@@ -20,25 +33,33 @@ export default function Header() {
           <Logo />
 
           <Box>
-            {/* Desktop */}
-            <ButtonGroup gap={2}>
-              <Link href="#inicio" variant={"link"} color={"white"}>
-                Inicio
-              </Link>
-              <Link href="#nosotros" variant={"link"} color={"white"}>
-                Sobre Nosotros
-              </Link>
+            {isMobile ? (
+              <>
+                <Button>
+                  <FaBars />
+                </Button>
+              </>
+            ) : (
+              <ButtonGroup gap={2} color={"primary"} fontWeight={"bold"}>
+                {/* Desktop */}
+                <Link href="#inicio" variant={"link"}>
+                  Inicio
+                </Link>
+                <Link href="#nosotros" variant={"link"}>
+                  Sobre Nosotros
+                </Link>
 
-              <Link href="#servicios" variant={"link"} color={"white"}>
-                Servicios
-              </Link>
-              <Link href="#clientes" variant={"link"} color={"white"}>
-                Casos de Éxito
-              </Link>
-              <Link href="#contacto" variant={"link"} color={"white"}>
-                Contacto
-              </Link>
-            </ButtonGroup>
+                <Link href="#servicios" variant={"link"}>
+                  Servicios
+                </Link>
+                <Link href="#clientes" variant={"link"}>
+                  Casos de Éxito
+                </Link>
+                <Link href="#contacto" variant={"link"}>
+                  Contacto
+                </Link>
+              </ButtonGroup>
+            )}
           </Box>
         </Flex>
       </Container>

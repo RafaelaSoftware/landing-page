@@ -1,4 +1,4 @@
-import { Heading, VStack } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, VStack } from "@chakra-ui/react";
 
 export default function Hero() {
   return (
@@ -12,9 +12,22 @@ export default function Hero() {
       backgroundSize={"cover"}
       backgroundRepeat={"no-repeat"}
     >
-      <Heading as={"h1"} fontSize={"4xl"} color={"white"} textAlign={"center"}>
-        Transformando industrias con soluciones tecnológicas innovadoras
-      </Heading>
+      <Container maxW={"container.xl"}>
+        <Flex width={"100%"} justifyContent={"flex-end"}>
+          <Heading
+            as={"h1"}
+            color={"primary"}
+            textAlign={"right"}
+            fontSize={"5xl"}
+          >
+            <Flex flexDirection={"column"}>
+              <span>Transformando industrias</span>
+              <span>con soluciones tecnológicas</span>
+              <span>innovadoras y globales</span>
+            </Flex>
+          </Heading>
+        </Flex>
+      </Container>
     </VStack>
   );
 }

@@ -17,20 +17,24 @@ export default function ChakraProviderUI({ children }) {
           :root {
             --font-primary: ${primary.style.fontFamily};
           }
+          body {
+            font-family: var(--font-primary) !important;
+          }
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            font-family: var(--font-primary) !important;
+          }
         `}
       </style>
       <CacheProvider>
         <ChakraProvider theme={theme}>
           <CSSReset />
-          <Box bgColor={"gray.50"}>
+          <Box bgColor={"white"}>
             <Header />
-            {/* <Container
-              maxW="container.xl"
-              minHeight={"100vh"}
-              display={"flex"}
-              flexDirection={"column"}
-            >
-            </Container> */}
             {children}
             <Footer />
           </Box>

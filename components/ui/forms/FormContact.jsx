@@ -4,6 +4,7 @@ import {
   Button,
   FormControl,
   FormLabel,
+  Heading,
   Input,
   InputGroup,
   InputLeftElement,
@@ -46,8 +47,11 @@ export default function FormContact() {
     >
       {({ values, handleChange, handleBlur, handleSubmit }) => (
         <form onSubmit={handleSubmit}>
-          <Box p={8} bg="white" borderRadius="lg" boxShadow={"sm"}>
-            <VStack spacing={5}>
+          <Box p={8}>
+            <Heading as={"h5"} textAlign={"left"} mb={4}>
+              Envianos tus consultas:
+            </Heading>
+            <VStack spacing={4}>
               <FormControl id="name" isRequired>
                 <FormLabel>Nombre</FormLabel>
                 <InputGroup borderColor="#E0E1E7">
@@ -120,9 +124,12 @@ export default function FormContact() {
                 <Button
                   type="submit"
                   variant="solid"
-                  bg="#0D74FF"
+                  bgColor="primary"
                   color="white"
-                  _hover={{}}
+                  _hover={{
+                    bgColor: "secondary",
+                  }}
+                  width={{ base: "full", md: "auto" }}
                 >
                   Enviar
                 </Button>
