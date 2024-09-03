@@ -21,7 +21,6 @@ export default function Footer() {
             }
             target="_blank"
             rel="noopener noreferrer"
-            isExternal
           >
             <HStack>
               <Box width={"30px"} height={"30px"}>
@@ -42,7 +41,6 @@ export default function Footer() {
             textDecoration={"underline"}
             target="_blank"
             rel="noopener noreferrer"
-            isExternal
           >
             <HStack>
               <Box width={"30px"} height={"30px"}>
@@ -75,7 +73,6 @@ export default function Footer() {
             href={`https://wa.me/${NUMBER_WHATAPP}`}
             target="_blank"
             rel="noopener noreferrer"
-            isExternal
           >
             <HStack>
               <Box width={"30px"} height={"30px"}>

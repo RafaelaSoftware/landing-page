@@ -1,6 +1,7 @@
 import { Box, Container, Grid, GridItem } from "@chakra-ui/react";
 import TitleSection from "@/components/ui/TitleSection";
 import Image from "next/image";
+import { HEADER_HEIGHT } from "@/enums/config";
 
 const clientImages = [
   { name: "BolsaFilm - BLF", src: "/images/clients/bolsafilm.png" },
@@ -23,7 +24,11 @@ const clientImages = [
 
 export default function Clients() {
   return (
-    <Box minHeight={"calc(100vh - 100px)"} id="clientes">
+    <Box
+      id="clientes"
+      minHeight={`calc(100vh - ${HEADER_HEIGHT})`}
+      scrollMarginTop={HEADER_HEIGHT}
+    >
       <TitleSection>Clientes</TitleSection>
 
       <Container maxW={"container.lg"}>

@@ -1,4 +1,5 @@
 import TitleSection from "@/components/ui/TitleSection";
+import { HEADER_HEIGHT } from "@/enums/config";
 import {
   Box,
   Button,
@@ -62,7 +63,11 @@ export default function Services() {
       );
     }
     return (
-      <Box minHeight={"calc(100vh - 100px)"} id={id}>
+      <Box
+        id={id}
+        minHeight={`calc(100vh - ${HEADER_HEIGHT})`}
+        scrollMarginTop={HEADER_HEIGHT}
+      >
         <Center bgColor={"secondary"} height={"60px"}>
           <Heading as={"h3"} color={"white"} fontSize={"2xl"}>
             {title}
@@ -151,7 +156,11 @@ export default function Services() {
   }
 
   return (
-    <Box minHeight={"calc(100vh - 100px)"} id="servicios">
+    <Box
+      minHeight={"calc(100vh - 100px)"}
+      id="servicios"
+      scrollMarginTop={"100px"}
+    >
       <TitleSection>Servicios</TitleSection>
       <ServicesArticle
         id="ERPCalipso"

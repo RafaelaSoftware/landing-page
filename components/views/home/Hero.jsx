@@ -1,10 +1,12 @@
-import { Box, Container, Flex, Heading, VStack } from "@chakra-ui/react";
+import { HEADER_HEIGHT } from "@/enums/config";
+import { Container, Flex, Heading, VStack } from "@chakra-ui/react";
 
 export default function Hero() {
   return (
     <VStack
       id="inicio"
-      minHeight={"calc(100vh - 100px)"}
+      minHeight={`calc(100vh - ${HEADER_HEIGHT})`}
+      scrollMarginTop={HEADER_HEIGHT}
       alignContent={"center"}
       justifyContent={"center"}
       backgroundImage={"url(./images/hero.jpeg)"}

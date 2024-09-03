@@ -39,36 +39,6 @@ export default function Header() {
   });
   const btnRef = useRef();
 
-  useEffect(() => {
-    const handleSmoothScroll = (event) => {
-      const targetId = event.target.getAttribute("href");
-      if (targetId && targetId.startsWith("#")) {
-        event.preventDefault();
-        const targetElement = document.querySelector(targetId);
-        const headerOffset = document.querySelector("header").offsetHeight;
-        const elementPosition =
-          targetElement.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = elementPosition - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }
-    };
-
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach((link) => {
-      link.addEventListener("click", handleSmoothScroll);
-    });
-
-    return () => {
-      links.forEach((link) => {
-        link.removeEventListener("click", handleSmoothScroll);
-      });
-    };
-  }, []);
-
   return (
     <Box
       bgColor={"tertiary"}

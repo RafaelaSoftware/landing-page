@@ -10,12 +10,12 @@ import {
 } from "@chakra-ui/react";
 import FormContact from "@/components/ui/forms/FormContact";
 import Link from "next/link";
-import { NUMBER_WHATAPP } from "@/enums/config";
+import { HEADER_HEIGHT, NUMBER_WHATAPP } from "@/enums/config";
 import Image from "next/image";
 
 export default function Contact() {
   return (
-    <Box id="contacto">
+    <Box id="contacto" scrollMarginTop={HEADER_HEIGHT}>
       <TitleSection>Contacto</TitleSection>
       <Container maxWidth={"container.xl"} mb={4}>
         <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }}>
@@ -32,7 +32,6 @@ export default function Contact() {
               <Link
                 href={`https://wa.me/${NUMBER_WHATAPP}`}
                 textDecoration={"underline"}
-                isExternal
                 target="_blank"
                 rel="noopener noreferrer"
               >

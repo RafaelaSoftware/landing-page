@@ -1,4 +1,5 @@
 import TitleSection from "@/components/ui/TitleSection";
+import { HEADER_HEIGHT } from "@/enums/config";
 import {
   Box,
   Container,
@@ -16,7 +17,8 @@ export default function AboutUs() {
       id="nosotros"
       flexDirection={"column"}
       justifyContent={"center"}
-      minHeight={"calc(100vh - 100px)"}
+      minHeight={`calc(100vh - ${HEADER_HEIGHT})`}
+      scrollMarginTop={HEADER_HEIGHT}
     >
       <TitleSection>Nosotros</TitleSection>
       <Container maxWidth={"container.xl"} overflow={"visible"} pl={0}>
