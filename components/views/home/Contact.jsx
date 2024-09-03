@@ -24,7 +24,7 @@ export default function Contact() {
           </GridItem>
           <GridItem bgColor={"primary"}>
             <VStack
-              height={"100%"}
+              height={{ base: "xs", md: "100%" }}
               color="#6cc06f"
               justifyContent={"center"}
               alignItems={"center"}
@@ -46,7 +46,7 @@ export default function Contact() {
                       style={{ width: "100%", height: "auto" }}
                     />
                   </Box>
-                  <Heading as={"h4"} color={"white"}>
+                  <Heading as={"h4"} color={"white"} textAlign={"center"}>
                     ¡Hablá con nosotros!
                   </Heading>
                 </Center>

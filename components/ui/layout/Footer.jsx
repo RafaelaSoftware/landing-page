@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <Box bgColor={"tertiary"} py={2}>
+    <Box bgColor={"tertiary"} py={{ base: 6, md: 2 }}>
       <Container maxW={"container.xl"}>
         <Flex
           flexDirection={{ base: "column", md: "row" }}

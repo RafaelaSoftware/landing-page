@@ -48,7 +48,15 @@ export default function FormContact() {
       {({ values, handleChange, handleBlur, handleSubmit }) => (
         <form onSubmit={handleSubmit}>
           <Box p={8}>
-            <Heading as={"h5"} textAlign={"left"} mb={4}>
+            <Heading
+              as={"h5"}
+              textAlign={"left"}
+              mb={4}
+              fontSize={{
+                base: "2xl",
+                md: "3xl",
+              }}
+            >
               Envianos tus consultas:
             </Heading>
             <VStack spacing={4}>

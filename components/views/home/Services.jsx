@@ -45,6 +45,7 @@ export default function Services() {
             transform={isLeft ? "skew(-20deg)" : "skew(20deg)"}
             color={"secondary"}
             fontWeight={"bold"}
+            fontSize={{ base: "xs", md: "md" }}
           >
             {children}
           </Text>
@@ -69,7 +70,11 @@ export default function Services() {
         scrollMarginTop={HEADER_HEIGHT}
       >
         <Center bgColor={"secondary"} height={"60px"}>
-          <Heading as={"h3"} color={"white"} fontSize={"2xl"}>
+          <Heading
+            as={"h3"}
+            color={"white"}
+            fontSize={{ base: "md", sm: "lg", md: "2xl" }}
+          >
             {title}
           </Heading>
         </Center>
@@ -94,13 +99,17 @@ export default function Services() {
               pr={{ base: 0, md: !isLeft && 4 }}
               order={{ base: 2, md: isLeft ? 2 : 1 }}
             >
-              <Box lineHeight={8} textAlign={"justify"}>
+              <Box
+                lineHeight={8}
+                textAlign={"justify"}
+                fontSize={{ base: "sm", md: "md" }}
+              >
                 {description}
               </Box>
               <Box>
                 <Heading
                   as={"h4"}
-                  fontSize={"md"}
+                  fontSize={{ base: "sm", md: "md" }}
                   my={2}
                   fontWeight={"normal"}
                   width={"full"}
@@ -112,7 +121,7 @@ export default function Services() {
                 <Flex
                   flexDirection={"column"}
                   gap={4}
-                  pl={isLeft && 4}
+                  pl={{ base: 1, md: isLeft && 4 }}
                   mr={{ base: 0, md: 0 }}
                 >
                   {benefits.map((benefit) => (
@@ -133,18 +142,26 @@ export default function Services() {
                 transform: "translateY(-2px)",
               }}
               borderRadius={2}
+              fontSize={{ base: "xs", md: "md" }}
+              size={{ base: "xs", md: "md" }}
             >
               <Box
                 position={"absolute"}
-                left={-4}
-                transform={"translateX(-20px)"}
-                fontSize={"40px"}
+                left={{ base: "-15px", md: "-30px" }}
+                transform={{
+                  base: "translateX(-20px)",
+                  md: "translateX(-20px)",
+                }}
+                height={{ base: "40px", md: "60px" }}
+                width={{ base: "40px", md: "60px" }}
               >
                 <Image
                   src="/images/iconos/icono-info.svg"
                   alt="Icono de WhatsApp - Quiero solicitar demo"
-                  height={60}
-                  width={60}
+                  height={0}
+                  width={0}
+                  sizes="100%"
+                  style={{ width: "100%", height: "auto" }}
                 />
               </Box>
               {btnLabel}
@@ -263,7 +280,7 @@ export default function Services() {
           <Heading
             as={"h6"}
             color={"secondary"}
-            fontSize={"xl"}
+            fontSize={{ base: "lg", md: "xl" }}
             width={"full"}
             textAlign={"center"}
             mb={10}
@@ -274,6 +291,7 @@ export default function Services() {
           <Grid
             templateColumns={{ base: "1fr", md: "1fr 1fr" }}
             gap={{ base: 2, md: 4 }}
+            fontSize={{ base: "sm", md: "md" }}
           >
             <GridItem display={"flex"} flexDirection={"column"} gap={2}>
               <Text>

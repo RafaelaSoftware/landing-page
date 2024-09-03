@@ -21,7 +21,14 @@ export default function AboutUs() {
       scrollMarginTop={HEADER_HEIGHT}
     >
       <TitleSection>Nosotros</TitleSection>
-      <Container maxWidth={"container.xl"} overflow={"visible"} pl={0}>
+      <Container
+        maxWidth={"container.xl"}
+        overflow={"visible"}
+        pl={{
+          base: 4,
+          md: 0,
+        }}
+      >
         <Grid
           templateColumns={{ base: "1fr", md: "1fr 1fr" }}
           height={"100%"}
@@ -51,9 +58,16 @@ export default function AboutUs() {
             padding={4}
             display={"flex"}
             alignItems={"center"}
-            pr={4}
-            pl={8}
+            pr={{
+              base: 0,
+              md: 4,
+            }}
+            pl={{
+              base: 0,
+              md: 8,
+            }}
             lineHeight={8}
+            fontSize={{ base: "sm", md: "md" }}
           >
             <VStack alignItems={"flex-start"}>
               <Text fontWeight={"bold"}>

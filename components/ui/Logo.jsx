@@ -3,12 +3,17 @@ import Image from "next/image";
 
 export default function Logo({ width = 160, height = 100 }) {
   return (
-    <Box>
+    <Box width={width}>
       <Image
         src={"/images/logo.svg"}
         alt={"Logo de Rafaela Software - S.A"}
-        width={width}
-        height={height}
+        width={0}
+        height={0}
+        sizes="100%"
+        style={{
+          width: "100%",
+          height: "auto",
+        }}
       />
     </Box>
   );

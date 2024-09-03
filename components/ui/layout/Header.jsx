@@ -52,7 +52,7 @@ export default function Header() {
         <Grid templateColumns={"260px 1fr"} height={"100px"}>
           <GridItem
             display={"flex"}
-            justifyContent={"center"}
+            justifyContent={"flex-start"}
             alignItems={"center"}
             height={"100%"}
           >
@@ -169,6 +169,7 @@ export default function Header() {
                 <>
                   <Button
                     color={"primary"}
+                    variant={"ghost"}
                     onClick={onOpen}
                     _hover={{
                       color: "secondary",

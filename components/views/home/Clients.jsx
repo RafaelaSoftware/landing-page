@@ -57,7 +57,6 @@ export default function Clients() {
                   width={0}
                   height={0}
                   sizes="100%"
-                  objectFit="contain"
                   style={{ width: "100%", height: "auto" }}
                 />
               </Box>

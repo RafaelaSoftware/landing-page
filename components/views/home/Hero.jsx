@@ -20,7 +20,7 @@ export default function Hero() {
             as={"h1"}
             color={"primary"}
             textAlign={"right"}
-            fontSize={"5xl"}
+            fontSize={{ base: "4xl", md: "5xl" }}
           >
             <Flex flexDirection={"column"}>
               <span>Transformando industrias</span>
