@@ -19,6 +19,9 @@ export default function Footer() {
             href={
               "https://www.google.com/maps/place/C.+las+Araucarias+1520,+S2300+Rafaela,+Santa+Fe/data=!4m2!3m1!1s0x95cab02636b6525f:0xc19ba7106f4453ed?sa=X&ved=1t:242&ictx=111"
             }
+            target="_blank"
+            rel="noopener noreferrer"
+            isExternal
           >
             <HStack>
               <Box width={"30px"} height={"30px"}>
@@ -37,9 +40,9 @@ export default function Footer() {
           <Link
             href={LINK_IG}
             textDecoration={"underline"}
-            isExternal
             target="_blank"
             rel="noopener noreferrer"
+            isExternal
           >
             <HStack>
               <Box width={"30px"} height={"30px"}>
@@ -68,7 +71,12 @@ export default function Footer() {
             <Text>info@rafaelasoftware.com.ar</Text>
           </HStack>
 
-          <Link href={`https://wa.me/${NUMBER_WHATAPP}`} isExternal>
+          <Link
+            href={`https://wa.me/${NUMBER_WHATAPP}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            isExternal
+          >
             <HStack>
               <Box width={"30px"} height={"30px"}>
                 <Image

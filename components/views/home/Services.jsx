@@ -14,6 +14,7 @@ import Image from "next/image";
 
 export default function Services() {
   function ServicesArticle({
+    id,
     title,
     description,
     subtitle,
@@ -61,7 +62,7 @@ export default function Services() {
       );
     }
     return (
-      <Box minHeight={"calc(100vh - 100px)"}>
+      <Box minHeight={"calc(100vh - 100px)"} id={id}>
         <Center bgColor={"secondary"} height={"60px"}>
           <Heading as={"h3"} color={"white"} fontSize={"2xl"}>
             {title}
@@ -153,6 +154,7 @@ export default function Services() {
     <Box minHeight={"calc(100vh - 100px)"} id="servicios">
       <TitleSection>Servicios</TitleSection>
       <ServicesArticle
+        id="ERPCalipso"
         title={"Implementación ERP Calipso Corporate"}
         description={
           <>
@@ -182,6 +184,7 @@ export default function Services() {
       />
 
       <ServicesArticle
+        id="SistemaMES"
         title={"Sistema MES"}
         description={
           <>
@@ -208,6 +211,7 @@ export default function Services() {
       />
 
       <ServicesArticle
+        id="SoftwareMedida"
         title={"Software a medida"}
         description={
           <>
