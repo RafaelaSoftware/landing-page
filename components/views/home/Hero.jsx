@@ -10,7 +10,7 @@ export default function Hero() {
       scrollMarginTop={HEADER_HEIGHT}
       alignContent={"center"}
       justifyContent={"center"}
-      backgroundImage={"url(./images/hero.jpeg)"}
+      backgroundImage={"url(./images/hero.webp)"}
       backgroundPosition={"center center"}
       backgroundSize={"cover"}
       backgroundRepeat={"no-repeat"}

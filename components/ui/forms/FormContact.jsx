@@ -49,7 +49,7 @@ export default function FormContact() {
         <form onSubmit={handleSubmit}>
           <Box p={8}>
             <Heading
-              as={"h5"}
+              as={"h3"}
               textAlign={"left"}
               mb={4}
               fontSize={{

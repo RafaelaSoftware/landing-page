@@ -31,6 +31,7 @@ export default function NavbarMobile({
           color: "secondary",
           bgColor: "#403c9021",
         }}
+        aria-label="Abrir menú de navegación"
       >
         <FaBars />
       </Button>
