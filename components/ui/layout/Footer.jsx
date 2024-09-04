@@ -70,7 +70,7 @@ export default function Footer() {
           </HStack>
 
           <Link
-            href={`https://wa.me/${NUMBER_WHATAPP}`}
+            href={`https://wa.me/${NUMBER_WHATAPP}?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios.`}
             target="_blank"
             rel="noopener noreferrer"
           >

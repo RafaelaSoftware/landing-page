@@ -30,7 +30,7 @@ export default function Contact() {
               alignItems={"center"}
             >
               <Link
-                href={`https://wa.me/${NUMBER_WHATAPP}`}
+                href={`https://wa.me/${NUMBER_WHATAPP}?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios.`}
                 textDecoration={"underline"}
                 target="_blank"
                 rel="noopener noreferrer"

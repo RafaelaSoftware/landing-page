@@ -3,6 +3,7 @@ import AboutUs from "@/components/views/home/AboutUs";
 import Services from "@/components/views/home/Services";
 import Clients from "@/components/views/home/Clients";
 import Contact from "@/components/views/home/Contact";
+import ButtonWhatsApp from "@/components/ui/ButtonWhatsApp";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,8 @@ export default function HomePage() {
       <Services />
       <Clients />
       <Contact />
+
+      <ButtonWhatsApp />
     </>
   );
 }
