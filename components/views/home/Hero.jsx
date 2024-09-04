@@ -5,6 +5,7 @@ export default function Hero() {
   return (
     <VStack
       id="inicio"
+      as={"section"}
       minHeight={`calc(100vh - ${HEADER_HEIGHT})`}
       scrollMarginTop={HEADER_HEIGHT}
       alignContent={"center"}

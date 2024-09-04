@@ -15,14 +15,14 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
-    <Box id="contacto" scrollMarginTop={HEADER_HEIGHT}>
+    <Box id="contacto" scrollMarginTop={HEADER_HEIGHT} as="section">
       <TitleSection>Contacto</TitleSection>
       <Container maxWidth={"container.xl"} mb={4}>
         <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }}>
-          <GridItem>
+          <GridItem as={"article"}>
             <FormContact />
           </GridItem>
-          <GridItem bgColor={"primary"}>
+          <GridItem as={"aside"} bgColor={"primary"}>
             <VStack
               height={{ base: "xs", md: "100%" }}
               color="#6cc06f"

@@ -67,6 +67,7 @@ export function ServicesArticle({
       id={id}
       minHeight={`calc(100vh - ${HEADER_HEIGHT})`}
       scrollMarginTop={HEADER_HEIGHT}
+      as="article"
     >
       <Center bgColor={"secondary"} height={"60px"}>
         <Heading

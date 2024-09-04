@@ -50,6 +50,7 @@ export default function NavbarMobile({
 
           <DrawerBody>
             <ButtonGroup
+              as={"nav"}
               gap={2}
               color={"secondary"}
               fontWeight={"bold"}

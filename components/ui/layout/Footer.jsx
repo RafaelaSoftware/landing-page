@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <Box bgColor={"tertiary"} py={{ base: 6, md: 2 }}>
+    <Box bgColor={"tertiary"} py={{ base: 6, md: 2 }} as="footer">
       <Container maxW={"container.xl"}>
         <Flex
           flexDirection={{ base: "column", md: "row" }}
@@ -14,6 +14,7 @@ export default function Footer() {
           gap={4}
           minHeight={"80px"}
           height={"100%"}
+          as={"nav"}
         >
           <Link
             href={

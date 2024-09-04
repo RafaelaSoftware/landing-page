@@ -14,7 +14,7 @@ import { FaAngleDown } from "react-icons/fa6";
 
 export default function NavbarDesktop() {
   return (
-    <ButtonGroup gap={2}>
+    <ButtonGroup gap={2} as={"nav"}>
       <Button
         as={"a"}
         href="#"

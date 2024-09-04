@@ -15,6 +15,7 @@ export default function AboutUs() {
   return (
     <Flex
       id="nosotros"
+      as={"main"}
       flexDirection={"column"}
       justifyContent={"center"}
       minHeight={`calc(100vh - ${HEADER_HEIGHT})`}
@@ -28,6 +29,8 @@ export default function AboutUs() {
           base: 4,
           md: 0,
         }}
+        as={"section"}
+        aria-labelledby="section-nosotros"
       >
         <Grid
           templateColumns={{ base: "1fr", md: "1fr 1fr" }}

@@ -23,6 +23,7 @@ export default function Header() {
 
   return (
     <Box
+      as="header"
       bgColor={"tertiary"}
       position={"sticky"}
       top={0}

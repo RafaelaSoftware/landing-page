@@ -26,6 +26,7 @@ export default function Clients() {
   return (
     <Box
       id="clientes"
+      as="section"
       minHeight={`calc(100vh - ${HEADER_HEIGHT})`}
       scrollMarginTop={HEADER_HEIGHT}
     >

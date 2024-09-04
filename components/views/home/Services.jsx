@@ -15,6 +15,8 @@ export default function Services() {
       minHeight={"calc(100vh - 100px)"}
       id="servicios"
       scrollMarginTop={"100px"}
+      as={"section"}
+      aria-labelledby="section-servicios"
     >
       <TitleSection>Servicios</TitleSection>
       <ServicesArticle
