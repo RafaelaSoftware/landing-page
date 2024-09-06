@@ -45,7 +45,7 @@ export default function AboutUs() {
               height={"100%"}
             >
               <Image
-                src="/images/fotografia-logo.jpg"
+                src="/images/fotografia-cartel1.jpeg"
                 alt="Rafaela Software S.A."
                 width={0}
                 height={0}
@@ -53,6 +53,8 @@ export default function AboutUs() {
                 style={{
                   width: "100%",
                   height: "auto",
+                  objectFit: "cover",
+                  aspectRatio: "4/3",
                 }}
               />
             </Box>
