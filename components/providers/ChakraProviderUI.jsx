@@ -6,8 +6,8 @@ import { primary } from "@/theme/foundations/fonts";
 import theme from "@/theme";
 
 import { CacheProvider } from "@chakra-ui/next-js";
-import Header from "../ui/Header";
-import Footer from "../ui/Footer";
+import Header from "@/components/ui/layout/Header";
+import Footer from "@/components/ui/layout/Footer";
 
 export default function ChakraProviderUI({ children }) {
   return (
@@ -17,20 +17,29 @@ export default function ChakraProviderUI({ children }) {
           :root {
             --font-primary: ${primary.style.fontFamily};
           }
+          html {
+            scroll-behavior: smooth;
+          }
+          body {
+            font-family: var(--font-primary) !important;
+          }
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6,
+          p {
+            font-family: var(--font-primary) !important;
+            color: #3c3c3c;
+          }
         `}
       </style>
       <CacheProvider>
         <ChakraProvider theme={theme}>
           <CSSReset />
-          <Box bgColor={"gray.50"}>
+          <Box bgColor={"white"}>
             <Header />
-            {/* <Container
-              maxW="container.xl"
-              minHeight={"100vh"}
-              display={"flex"}
-              flexDirection={"column"}
-            >
-            </Container> */}
             {children}
             <Footer />
           </Box>

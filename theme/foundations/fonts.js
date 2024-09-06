@@ -1,9 +1,9 @@
 import { theme as base } from "@chakra-ui/react";
-import { Inter } from "next/font/google";
+import { Raleway } from "next/font/google";
 
 
 // REMEMBER export this font in app/components/providers/ChakraProvider.js
-export const primary = Inter({
+export const primary = Raleway({
     weights: [400, 500, 600, 700],
     subsets: ["latin"],
     variable: "--font-primary",
