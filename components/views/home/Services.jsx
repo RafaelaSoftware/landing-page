@@ -21,6 +21,7 @@ export default function Services() {
       <TitleSection>Servicios</TitleSection>
       <ServicesArticle
         id="ERPCalipso"
+        src="/images/servicios1.png"
         title={"Implementación ERP Calipso Corporate"}
         description={
           <>
@@ -51,6 +52,7 @@ export default function Services() {
 
       <ServicesArticle
         id="SistemaMES"
+        src="/images/servicios2.png"
         title={"Sistema MES"}
         description={
           <>
@@ -78,6 +80,7 @@ export default function Services() {
 
       <ServicesArticle
         id="SoftwareMedida"
+        src="/images/servicios3.png"
         title={"Software a medida"}
         description={
           <>

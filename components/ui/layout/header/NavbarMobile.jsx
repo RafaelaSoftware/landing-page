@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { FaAngleDown, FaBars } from "react-icons/fa6";
+import Logo from "../../Logo";
 
 export default function NavbarMobile({
   isOpen,
@@ -46,7 +47,9 @@ export default function NavbarMobile({
         <DrawerContent bg={"tertiary"}>
           <DrawerCloseButton />
           <DrawerHeader>
-            <Box ml={4}>Rafaela Software</Box>
+            <Box ml={4}>
+              <Logo />
+            </Box>
           </DrawerHeader>
 
           <DrawerBody>
