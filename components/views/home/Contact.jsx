@@ -15,7 +15,13 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
-    <Box id="contacto" scrollMarginTop={HEADER_HEIGHT} as="section">
+    <Box
+      id="contacto"
+      scrollMarginTop={HEADER_HEIGHT}
+      as="section"
+      itemScope
+      itemType="https://schema.org/ContactPage"
+    >
       <TitleSection>Contacto</TitleSection>
       <Container maxWidth={"container.xl"} mb={4}>
         <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }}>
@@ -36,6 +42,7 @@ export default function Contact() {
                 textDecoration={"underline"}
                 target="_blank"
                 rel="noopener noreferrer"
+                itemProp="url"
               >
                 <Center alignItems={"center"} flexDirection={"column"}>
                   <Box maxW={"200px"} maxHeight={"200px"}>

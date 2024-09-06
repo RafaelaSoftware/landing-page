@@ -14,6 +14,8 @@ export default function Hero() {
       backgroundPosition={"center center"}
       backgroundSize={"cover"}
       backgroundRepeat={"no-repeat"}
+      itemScope
+      itemType="https://schema.org/WebPage"
     >
       <Container maxW={"container.xl"}>
         <Flex width={"100%"} justifyContent={"flex-end"}>
@@ -22,11 +24,12 @@ export default function Hero() {
             color={"primary"}
             textAlign={"right"}
             fontSize={{ base: "4xl", md: "5xl" }}
+            itemProp="headline"
           >
             <Flex flexDirection={"column"}>
-              <span>Transformando industrias</span>
-              <span>con soluciones tecnológicas</span>
-              <span>innovadoras y globales</span>
+              <span itemProp="description">Transformando industrias</span>
+              <span itemProp="description">con soluciones tecnológicas</span>
+              <span itemProp="description">innovadoras y globales</span>
             </Flex>
           </Heading>
         </Flex>

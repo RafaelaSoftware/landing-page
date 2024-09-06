@@ -15,10 +15,10 @@ export default function Services() {
       minHeight={"calc(100vh - 100px)"}
       id="servicios"
       scrollMarginTop={"100px"}
-      as={"section"}
-      aria-labelledby="section-servicios"
+      itemScope
+      itemType="https://schema.org/Service" // Tipo de esquema para servicios
     >
-      <TitleSection>Servicios</TitleSection>
+      <TitleSection itemProp="serviceType">Servicios</TitleSection>
       <ServicesArticle
         id="ERPCalipso"
         src="/images/servicios1.png"
@@ -128,6 +128,7 @@ export default function Services() {
             width={"full"}
             textAlign={"center"}
             mb={10}
+            itemProp="additionalType"
           >
             Softwares a medida diseñados e implementados por RS
           </Heading>
@@ -138,29 +139,33 @@ export default function Services() {
             fontSize={{ base: "sm", md: "md" }}
           >
             <GridItem display={"flex"} flexDirection={"column"} gap={2}>
-              <Text>
+              <Text itemProp="additionalType">
                 - Data analytics, tableros administrativos o dashboards
               </Text>
               <Text>- Desarrollo de app móviles</Text>
 
-              <Text>
+              <Text itemProp="additionalType">
                 - Toma de datos por colectora: gestión de almacenes, toma física
                 de inventario, expedición, despacho de mercadería o recepción de
                 mercadería
               </Text>
 
-              <Text>- Administración y gestión de pedidos y preventa</Text>
+              <Text itemProp="additionalType">
+                - Administración y gestión de pedidos y preventa
+              </Text>
             </GridItem>
             <GridItem display={"flex"} flexDirection={"column"} gap={2}>
-              <Text>
+              <Text itemProp="additionalType">
                 - Integración con sistema de entes de regulación nacional y
                 provinciales
               </Text>
-              <Text>
+              <Text itemProp="additionalType">
                 - Integración con hardware o dispositivos externos:
                 caudalímetros, sensores y balanzas
               </Text>
-              <Text>- Integración con sistemas de calidad y trazabilidad</Text>
+              <Text itemProp="additionalType">
+                - Integración con sistemas de calidad y trazabilidad
+              </Text>
             </GridItem>
           </Grid>
         </Container>

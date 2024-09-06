@@ -29,6 +29,8 @@ export default function Clients() {
       as="section"
       minHeight={`calc(100vh - ${HEADER_HEIGHT})`}
       scrollMarginTop={HEADER_HEIGHT}
+      itemScope
+      itemType="https://schema.org/Organization"
     >
       <TitleSection>Clientes</TitleSection>
 
@@ -50,6 +52,9 @@ export default function Clients() {
               justifyContent={"center"}
               alignItems={"center"}
               width={"100%"}
+              itemScope
+              itemType="https://schema.org/Brand"
+              itemProp="brand"
             >
               <Box maxWidth={"150px"} maxHeight={"150px"}>
                 <Image
@@ -59,8 +64,14 @@ export default function Clients() {
                   height={0}
                   sizes="100%"
                   style={{ width: "100%", height: "auto" }}
+                  itemProp="logo"
+                  itemScope
+                  itemType="https://schema.org/ImageObject"
                 />
               </Box>
+              <span itemProp="name" style={{ display: "none" }}>
+                {client.name}
+              </span>
             </GridItem>
           ))}
         </Grid>

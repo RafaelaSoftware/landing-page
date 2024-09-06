@@ -39,6 +39,7 @@ export function ServicesArticle({
         alignItems={"center"}
         justifyContent={isLeft ? "flex-end" : "flex-start"}
         mr={4}
+        itemProp="additionalType"
       >
         <Text
           textAlign={isLeft ? "right" : "left"}
@@ -69,12 +70,15 @@ export function ServicesArticle({
       minHeight={`calc(100vh - ${HEADER_HEIGHT})`}
       scrollMarginTop={HEADER_HEIGHT}
       as="article"
+      itemScope
+      itemType="https://schema.org/Service" // Define el tipo de esquema
     >
       <Center bgColor={"secondary"} height={"60px"}>
         <Heading
           as={"h3"}
           color={"white"}
           fontSize={{ base: "md", sm: "lg", md: "2xl" }}
+          itemProp="serviceType" // Tipo de servicio
         >
           {title}
         </Heading>
@@ -90,6 +94,7 @@ export function ServicesArticle({
               height={0}
               sizes="100%"
               style={{ width: "100%", height: "auto" }}
+              itemProp="image" // Propiedad de imagen
             />
           </GridItem>
           <GridItem
@@ -104,6 +109,7 @@ export function ServicesArticle({
               lineHeight={8}
               textAlign={"justify"}
               fontSize={{ base: "sm", md: "md" }}
+              itemProp="description" // Descripción del servicio
             >
               {description}
             </Box>
@@ -115,6 +121,7 @@ export function ServicesArticle({
                 fontWeight={"normal"}
                 width={"full"}
                 textAlign={isLeft ? "right" : "left"}
+                itemProp="additionalType" // Subtítulo como tipo adicional
               >
                 {subtitle}
               </Heading>
@@ -149,6 +156,7 @@ export function ServicesArticle({
               borderRadius={2}
               fontSize={{ base: "xs", md: "md" }}
               size={{ base: "xs", md: "md" }}
+              itemProp="potentialAction" // Acción potencial del botón
             >
               <Box
                 position={"absolute"}

@@ -46,7 +46,11 @@ export default function FormContact() {
       }}
     >
       {({ values, handleChange, handleBlur, handleSubmit }) => (
-        <form onSubmit={handleSubmit}>
+        <form
+          onSubmit={handleSubmit}
+          itemScope
+          itemType="https://schema.org/ContactPoint"
+        >
           <Box p={8}>
             <Heading
               as={"h3"}
@@ -61,7 +65,7 @@ export default function FormContact() {
             </Heading>
             <VStack spacing={4}>
               <FormControl id="name" isRequired>
-                <FormLabel>Nombre</FormLabel>
+                <FormLabel itemProp="name">Nombre</FormLabel>
                 <InputGroup borderColor="#E0E1E7">
                   <InputLeftElement pointerEvents="none">
                     <BsPerson color="gray.800" />
@@ -75,11 +79,12 @@ export default function FormContact() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.name}
+                    itemProp="name"
                   />
                 </InputGroup>
               </FormControl>
               <FormControl id="email" isRequired>
-                <FormLabel>E-Mail</FormLabel>
+                <FormLabel itemProp="email">E-Mail</FormLabel>
                 <InputGroup borderColor="#E0E1E7">
                   <InputLeftElement pointerEvents="none">
                     <MdOutlineEmail color="gray.800" />
@@ -93,11 +98,12 @@ export default function FormContact() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.email}
+                    itemProp="email"
                   />
                 </InputGroup>
               </FormControl>
               <FormControl id="phone" isRequired>
-                <FormLabel>Celular</FormLabel>
+                <FormLabel itemProp="telephone">Celular</FormLabel>
                 <InputGroup borderColor="#E0E1E7">
                   <InputLeftElement pointerEvents="none">
                     <BsTelephone color="gray.800" />
@@ -111,6 +117,7 @@ export default function FormContact() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.phone}
+                    itemProp="telephone"
                   />
                 </InputGroup>
               </FormControl>
@@ -126,9 +133,10 @@ export default function FormContact() {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.message}
+                  itemProp="message"
                 />
               </FormControl>
-              <FormControl id="name" float="right">
+              <FormControl id="submit" float="right">
                 <Button
                   type="submit"
                   variant="solid"
