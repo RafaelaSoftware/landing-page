@@ -6,6 +6,8 @@ import colors from "./foundations/colors";
 const overrides = {
     fonts,
     colors,
+    initialColorMode: 'light',
+    useSystemColorMode: false,
 };
 
 export default extendTheme(overrides);
