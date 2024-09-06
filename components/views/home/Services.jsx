@@ -15,10 +15,13 @@ export default function Services() {
       minHeight={"calc(100vh - 100px)"}
       id="servicios"
       scrollMarginTop={"100px"}
+      itemScope
+      itemType="https://schema.org/Service" // Tipo de esquema para servicios
     >
-      <TitleSection>Servicios</TitleSection>
+      <TitleSection itemProp="serviceType">Servicios</TitleSection>
       <ServicesArticle
         id="ERPCalipso"
+        src="/images/servicios1.png"
         title={"Implementación ERP Calipso Corporate"}
         description={
           <>
@@ -49,6 +52,7 @@ export default function Services() {
 
       <ServicesArticle
         id="SistemaMES"
+        src="/images/servicios2.png"
         title={"Sistema MES"}
         description={
           <>
@@ -76,6 +80,7 @@ export default function Services() {
 
       <ServicesArticle
         id="SoftwareMedida"
+        src="/images/servicios3.png"
         title={"Software a medida"}
         description={
           <>
@@ -117,12 +122,13 @@ export default function Services() {
       <Box bgColor={"tertiary"} py={10} mb={10}>
         <Container maxW={"container.lg"}>
           <Heading
-            as={"h6"}
+            as={"h5"}
             color={"secondary"}
             fontSize={{ base: "lg", md: "xl" }}
             width={"full"}
             textAlign={"center"}
             mb={10}
+            itemProp="additionalType"
           >
             Softwares a medida diseñados e implementados por RS
           </Heading>
@@ -133,29 +139,33 @@ export default function Services() {
             fontSize={{ base: "sm", md: "md" }}
           >
             <GridItem display={"flex"} flexDirection={"column"} gap={2}>
-              <Text>
+              <Text itemProp="additionalType">
                 - Data analytics, tableros administrativos o dashboards
               </Text>
               <Text>- Desarrollo de app móviles</Text>
 
-              <Text>
+              <Text itemProp="additionalType">
                 - Toma de datos por colectora: gestión de almacenes, toma física
                 de inventario, expedición, despacho de mercadería o recepción de
                 mercadería
               </Text>
 
-              <Text>- Administración y gestión de pedidos y preventa</Text>
+              <Text itemProp="additionalType">
+                - Administración y gestión de pedidos y preventa
+              </Text>
             </GridItem>
             <GridItem display={"flex"} flexDirection={"column"} gap={2}>
-              <Text>
+              <Text itemProp="additionalType">
                 - Integración con sistema de entes de regulación nacional y
                 provinciales
               </Text>
-              <Text>
+              <Text itemProp="additionalType">
                 - Integración con hardware o dispositivos externos:
                 caudalímetros, sensores y balanzas
               </Text>
-              <Text>- Integración con sistemas de calidad y trazabilidad</Text>
+              <Text itemProp="additionalType">
+                - Integración con sistemas de calidad y trazabilidad
+              </Text>
             </GridItem>
           </Grid>
         </Container>

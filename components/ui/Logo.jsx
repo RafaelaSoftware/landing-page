@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Logo({ width = 160, height = 100 }) {
   return (
-    <Box width={width}>
+    <Box width={{ base: "150px", md: width }}>
       <a
         href={"#"}
         style={{

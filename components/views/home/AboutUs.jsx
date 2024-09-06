@@ -15,10 +15,13 @@ export default function AboutUs() {
   return (
     <Flex
       id="nosotros"
+      as={"main"}
       flexDirection={"column"}
       justifyContent={"center"}
       minHeight={`calc(100vh - ${HEADER_HEIGHT})`}
       scrollMarginTop={HEADER_HEIGHT}
+      itemScope
+      itemType="https://schema.org/Organization"
     >
       <TitleSection>Nosotros</TitleSection>
       <Container
@@ -28,6 +31,8 @@ export default function AboutUs() {
           base: 4,
           md: 0,
         }}
+        as={"section"}
+        aria-labelledby="section-nosotros"
       >
         <Grid
           templateColumns={{ base: "1fr", md: "1fr 1fr" }}
@@ -40,9 +45,12 @@ export default function AboutUs() {
               justifyContent={"center"}
               alignItems={"center"}
               height={"100%"}
+              itemProp="image"
+              itemScope
+              itemType="https://schema.org/ImageObject"
             >
               <Image
-                src="/images/fotografia-logo.jpg"
+                src="/images/fotografia-cartel1.jpeg"
                 alt="Rafaela Software S.A."
                 width={0}
                 height={0}
@@ -50,6 +58,8 @@ export default function AboutUs() {
                 style={{
                   width: "100%",
                   height: "auto",
+                  objectFit: "cover",
+                  aspectRatio: "4/3",
                 }}
               />
             </Box>
@@ -70,10 +80,10 @@ export default function AboutUs() {
             fontSize={{ base: "sm", md: "md" }}
           >
             <VStack alignItems={"flex-start"}>
-              <Text fontWeight={"bold"}>
+              <Text fontWeight={"bold"} itemProp="name">
                 Rafaela Software S.A.: lo que necesites podemos hacerlo juntos
               </Text>
-              <Text textAlign={"justify"}>
+              <Text textAlign={"justify"} itemProp="description">
                 En RS somos líderes en la provisión de soluciones tecnológicas
                 avanzadas, diseñadas específicamente para optimizar y
                 revolucionar procesos y gestiones industriales integrales.
@@ -82,13 +92,13 @@ export default function AboutUs() {
                 también el sector de la construcción y la industria química.
               </Text>
 
-              <Text textAlign={"justify"}>
+              <Text textAlign={"justify"} itemProp="description">
                 Con una presencia sólida en el mercado nacional e internacional,
                 nuestra misión es potenciar la eficiencia, productividad y
                 rentabilidad de nuestros clientes a través de la innovación
                 tecnológica.
               </Text>
-              <Text textAlign={"justify"}>
+              <Text textAlign={"justify"} itemProp="description">
                 Desde la ciudad de Rafaela, provincia de Santa Fe, y con más de
                 25 años de experiencia en el rubro informático y sistemas,
                 nuestra firma se posiciona además como referente en consultoría

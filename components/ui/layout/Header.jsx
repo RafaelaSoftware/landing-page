@@ -23,6 +23,7 @@ export default function Header() {
 
   return (
     <Box
+      as="header"
       bgColor={"tertiary"}
       position={"sticky"}
       top={0}
@@ -31,7 +32,7 @@ export default function Header() {
       bg={"tertiary"}
     >
       <Container maxW={"container.xl"}>
-        <Grid templateColumns={"260px 1fr"} height={"100px"}>
+        <Grid templateColumns={"0.5fr 1fr"} height={"100px"}>
           <GridItem
             display={"flex"}
             justifyContent={"flex-start"}

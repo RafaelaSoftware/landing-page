@@ -5,7 +5,13 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <Box bgColor={"tertiary"} py={{ base: 6, md: 2 }}>
+    <Box
+      bgColor={"tertiary"}
+      py={{ base: 6, md: 2 }}
+      as="footer"
+      itemScope
+      itemType="https://schema.org/Organization"
+    >
       <Container maxW={"container.xl"}>
         <Flex
           flexDirection={{ base: "column", md: "row" }}
@@ -14,6 +20,7 @@ export default function Footer() {
           gap={4}
           minHeight={"80px"}
           height={"100%"}
+          as={"nav"}
         >
           <Link
             href={
@@ -21,6 +28,7 @@ export default function Footer() {
             }
             target="_blank"
             rel="noopener noreferrer"
+            itemProp="address"
           >
             <HStack>
               <Box width={"30px"} height={"30px"}>
@@ -32,7 +40,10 @@ export default function Footer() {
                   style={{ width: "100%", height: "auto" }}
                 />
               </Box>
-              <Text>Las Araucarias 1520, Rafaela, Santa Fe, ARG.</Text>
+              <Text itemProp="streetAddress">Las Araucarias 1520</Text>
+              <Text itemProp="addressLocality">Rafaela</Text>,
+              <Text itemProp="addressRegion">Santa Fe</Text>,
+              <Text itemProp="addressCountry">ARG</Text>
             </HStack>
           </Link>
 
@@ -41,6 +52,7 @@ export default function Footer() {
             textDecoration={"underline"}
             target="_blank"
             rel="noopener noreferrer"
+            itemProp="sameAs"
           >
             <HStack>
               <Box width={"30px"} height={"30px"}>
@@ -56,7 +68,11 @@ export default function Footer() {
             </HStack>
           </Link>
 
-          <HStack>
+          <HStack
+            itemProp="contactPoint"
+            itemScope
+            itemType="https://schema.org/ContactPoint"
+          >
             <Box width={"30px"} height={"30px"}>
               <Image
                 src="/images/iconos/icono-mail.svg"
@@ -66,7 +82,7 @@ export default function Footer() {
                 style={{ width: "100%", height: "auto" }}
               />
             </Box>
-            <Text>info@rafaelasoftware.com.ar</Text>
+            <Text itemProp="email">info@rafaelasoftware.com.ar</Text>
           </HStack>
 
           <Link
@@ -74,7 +90,11 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <HStack>
+            <HStack
+              itemProp="telephone"
+              itemScope
+              itemType="https://schema.org/ContactPoint"
+            >
               <Box width={"30px"} height={"30px"}>
                 <Image
                   src="/images/iconos/icono-telefono.svg"

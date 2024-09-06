@@ -15,6 +15,7 @@ import { HEADER_HEIGHT, NUMBER_WHATAPP } from "@/enums/config";
 
 export function ServicesArticle({
   id,
+  src,
   title,
   description,
   subtitle,
@@ -38,6 +39,7 @@ export function ServicesArticle({
         alignItems={"center"}
         justifyContent={isLeft ? "flex-end" : "flex-start"}
         mr={4}
+        itemProp="additionalType"
       >
         <Text
           textAlign={isLeft ? "right" : "left"}
@@ -67,12 +69,16 @@ export function ServicesArticle({
       id={id}
       minHeight={`calc(100vh - ${HEADER_HEIGHT})`}
       scrollMarginTop={HEADER_HEIGHT}
+      as="article"
+      itemScope
+      itemType="https://schema.org/Service" // Define el tipo de esquema
     >
       <Center bgColor={"secondary"} height={"60px"}>
         <Heading
           as={"h3"}
           color={"white"}
           fontSize={{ base: "md", sm: "lg", md: "2xl" }}
+          itemProp="serviceType" // Tipo de servicio
         >
           {title}
         </Heading>
@@ -82,12 +88,13 @@ export function ServicesArticle({
         <Grid templateColumns={{ base: "1f", md: "1fr 1fr" }}>
           <GridItem order={{ base: 1, md: isLeft ? 1 : 2 }}>
             <Image
-              src="/images/placeholder.png"
+              src={src}
               alt="Rafaela Software S.A. - Servicios"
               width={0}
               height={0}
               sizes="100%"
               style={{ width: "100%", height: "auto" }}
+              itemProp="image" // Propiedad de imagen
             />
           </GridItem>
           <GridItem
@@ -102,6 +109,7 @@ export function ServicesArticle({
               lineHeight={8}
               textAlign={"justify"}
               fontSize={{ base: "sm", md: "md" }}
+              itemProp="description" // Descripción del servicio
             >
               {description}
             </Box>
@@ -113,6 +121,7 @@ export function ServicesArticle({
                 fontWeight={"normal"}
                 width={"full"}
                 textAlign={isLeft ? "right" : "left"}
+                itemProp="additionalType" // Subtítulo como tipo adicional
               >
                 {subtitle}
               </Heading>
@@ -130,15 +139,14 @@ export function ServicesArticle({
             </Box>
           </GridItem>
         </Grid>
-
-        <Center mt={10}>
+        <Center mt={10} overflow={"visible"}>
           <Link
-            href={`https://wa.me/${NUMBER_WHATAPP}?text=Hola!,${btnLabel}`}
+            href={`https://wa.me/${NUMBER_WHATAPP}?text=Hola! ${btnLabel}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             <Button
-              bgColor={"#75ba63"}
+              bgColor={"#48ae49"}
               color={"white"}
               pl={8}
               position={"relative"}
@@ -148,6 +156,7 @@ export function ServicesArticle({
               borderRadius={2}
               fontSize={{ base: "xs", md: "md" }}
               size={{ base: "xs", md: "md" }}
+              itemProp="potentialAction" // Acción potencial del botón
             >
               <Box
                 position={"absolute"}
@@ -165,7 +174,11 @@ export function ServicesArticle({
                   height={0}
                   width={0}
                   sizes="100%"
-                  style={{ width: "100%", height: "auto" }}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    filter: "drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2))",
+                  }}
                 />
               </Box>
               {btnLabel}
