@@ -1,6 +1,10 @@
 import ChakraProviderUI from "@/components/providers/ChakraProviderUI";
 
 export const metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL),
+  alternates: {
+    canonical: '/',
+  },
   title: process.env.NEXT_PUBLIC_APP_NAME,
   description: "Líderes en la provisión de software industrial y soluciones tecnológicas para la optimización de procesos productivos., packaging, construcción y química.",
   authors: [
