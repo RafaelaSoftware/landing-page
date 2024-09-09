@@ -14,7 +14,7 @@ export const metadata = {
     }
   ],
   keywords: "rafaelasoftware, ERP Calipso Corporate, Sistema MES, Software a medida, Rafaela Software S.A, ERP, Calipso, MES, Software, Rafaela, Santa Fe, tecnologia, software, innovacion empresarial, innovacion tecnologica, soluciones tecnologicas, economia del conocimiento, innovacion empresarial",
-  image: "/images/logo.svg",
+  image: "/images/logo.png",
   url: process.env.NEXT_PUBLIC_APP_URL,
   siteName: process.env.NEXT_PUBLIC_APP_NAME,
   type: "website",
@@ -25,7 +25,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@rafaelasoftware",
-    images: ["/images/logo.svg"],
+    images: ["/images/logo.png"],
     title: "Rafaela Software S.A. | Soluciones Tecnológicas Innovadoras",
   },
   robots: "index, follow",
@@ -38,7 +38,7 @@ export const metadata = {
     site_name: process.env.NEXT_PUBLIC_APP_NAME,
     title: "Rafaela Software S.A. | Soluciones Tecnológicas Innovadoras",
     description: "Líderes en la provisión de software industrial y soluciones tecnológicas para la optimización de procesos productivos.",
-    image: "/images/logo.svg",
+    image: "/images/logo.png",
   },
 };
 
