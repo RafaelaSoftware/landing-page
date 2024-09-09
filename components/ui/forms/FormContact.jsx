@@ -23,7 +23,7 @@ export default function FormContact() {
     try {
       const body = {
         to: values.email,
-        text: `Nombre: ${values.name}\nCelular: ${values.phone}\nConsulta: ${values.message}`,
+        text: `Nombre: ${values.name}\nMail: ${values.email}\nCelular: ${values.phone}\nConsulta: ${values.message}`,
         html: "<strong>and some html</strong>",
       };
 
