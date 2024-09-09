@@ -20,11 +20,8 @@ export function ServicesArticle({
   description,
   subtitle,
   benefits,
-  secondarySubtitle = null,
-  appsDesigned = null,
-  linkLabel = null,
   btnLabel,
-
+  linkCalipso = false,
   isLeft = true,
 }) {
   function CardBenefits({ children }) {
@@ -86,16 +83,43 @@ export function ServicesArticle({
 
       <Container maxW={"container.xl"} py={10}>
         <Grid templateColumns={{ base: "1f", md: "1fr 1fr" }}>
-          <GridItem order={{ base: 1, md: isLeft ? 1 : 2 }}>
+          <GridItem display={"flex"} flexDirection={"column"} gap={1}>
             <Image
               src={src}
               alt="Rafaela Software S.A. - Servicios"
               width={0}
               height={0}
               sizes="100%"
-              style={{ width: "100%", height: "auto" }}
-              itemProp="image" // Propiedad de imagen
+              style={{
+                width: "100%",
+                height: "auto",
+                aspectRatio: "16/9",
+              }}
+              itemProp="image"
             />
+            {linkCalipso && (
+              <Box width={"full"} textAlign={"center"}>
+                <Box maxWidth={"300px"} display={"inline-block"}>
+                  <Link
+                    href={"https://www.calipso.com/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={"/images/logo-calipso.png"}
+                      alt="Calipso"
+                      width={0}
+                      height={0}
+                      sizes="100%"
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                      }}
+                    />
+                  </Link>
+                </Box>
+              </Box>
+            )}
           </GridItem>
           <GridItem
             display={"flex"}
