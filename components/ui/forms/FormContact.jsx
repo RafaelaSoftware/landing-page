@@ -19,7 +19,7 @@ export default function FormContact() {
   const sendEmail = async (values) => {
     try {
       const body = {
-        from: values.email,
+        to: values.email,
         text: `Nombre: ${values.name}\nCelular: ${values.phone}\nConsulta: ${values.message}`,
         html: "<strong>and some html</strong>",
       };
