@@ -43,6 +43,7 @@ export default function FormContact() {
       initialValues={{ name: "", email: "", phone: "", message: "" }}
       onSubmit={(values, actions) => {
         sendEmail(values);
+        actions.resetForm();
       }}
     >
       {({ values, handleChange, handleBlur, handleSubmit }) => (
