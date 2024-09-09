@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import ChakraProviderUI from "@/components/providers/ChakraProviderUI";
 
 export const metadata = {
@@ -49,6 +50,7 @@ export default function RootLayout({ children }) {
         <ChakraProviderUI>
           {children}
         </ChakraProviderUI>
+        <Analytics />
       </body>
     </html>
   );

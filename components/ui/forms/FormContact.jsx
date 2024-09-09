@@ -12,10 +12,13 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { Formik } from "formik";
+import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { BsPerson, BsTelephone } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 
 export default function FormContact() {
+  const [captcha, setCaptcha] = useState(null);
   const sendEmail = async (values) => {
     try {
       const body = {
@@ -43,6 +46,7 @@ export default function FormContact() {
       initialValues={{ name: "", email: "", phone: "", message: "" }}
       onSubmit={(values, actions) => {
         sendEmail(values);
+        actions.resetForm();
       }}
     >
       {({ values, handleChange, handleBlur, handleSubmit }) => (
@@ -146,9 +150,17 @@ export default function FormContact() {
                     bgColor: "secondary",
                   }}
                   width={{ base: "full", md: "auto" }}
+                  isDisabled={!captcha}
                 >
                   Enviar
                 </Button>
+
+                <ReCAPTCHA
+                  sitekey={
+                    process.env.RECAPTCHA_SITE_KEY || "Your client site key"
+                  }
+                  onChange={setCaptcha}
+                />
               </FormControl>
             </VStack>
           </Box>
