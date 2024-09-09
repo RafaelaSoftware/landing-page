@@ -24,13 +24,13 @@ export default function Footer() {
         >
           <Link
             href={
-              "https://www.google.com/maps/place/C.+las+Araucarias+1520,+S2300+Rafaela,+Santa+Fe/data=!4m2!3m1!1s0x95cab02636b6525f:0xc19ba7106f4453ed?sa=X&ved=1t:242&ictx=111"
+              "https://www.google.com/maps/place/C.+las+Araucarias+1524,+S2300+Rafaela,+Santa+Fe/@-31.2811672,-61.519767,17z/data=!3m1!4b1!4m5!3m4!1s0x95cab02636b6525f:0x3235dc8b082bd4aa!8m2!3d-31.2811718!4d-61.5171921?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"
             }
             target="_blank"
             rel="noopener noreferrer"
             itemProp="address"
           >
-            <HStack>
+            <HStack textAlign={"left"}>
               <Box width={"30px"} height={"30px"}>
                 <Image
                   src="/images/iconos/icono-dirreccion.svg"
@@ -40,10 +40,12 @@ export default function Footer() {
                   style={{ width: "100%", height: "auto" }}
                 />
               </Box>
-              <Text itemProp="streetAddress">Las Araucarias 1520</Text>
-              <Text itemProp="addressLocality">Rafaela</Text>,
-              <Text itemProp="addressRegion">Santa Fe</Text>,
-              <Text itemProp="addressCountry">ARG</Text>
+              <Flex flexWrap={"wrap"} gap={1}>
+                <Text itemProp="streetAddress">Las Araucarias 1524</Text>
+                <Text itemProp="addressLocality">Rafaela, </Text>
+                <Text itemProp="addressRegion">Santa Fe, </Text>
+                <Text itemProp="addressCountry">ARG</Text>
+              </Flex>
             </HStack>
           </Link>
 
