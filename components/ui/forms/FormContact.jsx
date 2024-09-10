@@ -163,7 +163,7 @@ export default function FormContact() {
                       bgColor: "secondary",
                     }}
                     width={{ base: "full", md: "auto" }}
-                    // isDisabled={!captcha}
+                    isDisabled={!captcha}
                   >
                     Enviar
                   </Button>
