@@ -5,8 +5,8 @@ export async function POST(request) {
     const res = await request.json();
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
-        to: process.env.EMAIL_TO || "info@rafaelasoftware.com.ar",
-        from: process.env.EMAIL_TO || "info@rafaelasoftware.com.ar",
+        to: process.env.NEXT_PUBLIC_EMAIL_TO || "info@rafaelasoftware.com.ar",
+        from: process.env.NEXT_PUBLIC_EMAIL_TO || "info@rafaelasoftware.com.ar",
         subject: 'Consulta de contacto',
         html: `<strong>${res.text}</strong>`,
     }

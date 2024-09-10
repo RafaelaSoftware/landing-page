@@ -20,6 +20,10 @@ export const metadata = {
   siteName: process.env.NEXT_PUBLIC_APP_NAME,
   type: "website",
   locale: "es_ES",
+  verification: {
+    google: process.env.GOOGLE_VERIFICATION_ID || 'your-google-verification-id-here',
+
+  },
 
 
   // Twitter

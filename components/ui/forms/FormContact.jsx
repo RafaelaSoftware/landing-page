@@ -45,6 +45,7 @@ export default function FormContact() {
   return (
     <Formik
       initialValues={{ name: "", email: "", phone: "", message: "" }}
+      enableReinitialize={true}
       onSubmit={(values, actions) => {
         sendEmail(values);
         actions.resetForm();
@@ -152,15 +153,13 @@ export default function FormContact() {
                       bgColor: "secondary",
                     }}
                     width={{ base: "full", md: "auto" }}
-                    isDisabled={!captcha}
+                    // isDisabled={!captcha}
                   >
                     Enviar
                   </Button>
 
                   <ReCAPTCHA
-                    sitekey={
-                      process.env.RECAPTCHA_SITE_KEY || "Your client site key"
-                    }
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                     onChange={setCaptcha}
                   />
                 </Flex>
