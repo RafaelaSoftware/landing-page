@@ -2,6 +2,7 @@
 import {
   Box,
   Button,
+  Flex,
   FormControl,
   FormLabel,
   Heading,
@@ -141,26 +142,28 @@ export default function FormContact() {
                 />
               </FormControl>
               <FormControl id="submit" float="right">
-                <Button
-                  type="submit"
-                  variant="solid"
-                  bgColor="primary"
-                  color="white"
-                  _hover={{
-                    bgColor: "secondary",
-                  }}
-                  width={{ base: "full", md: "auto" }}
-                  isDisabled={!captcha}
-                >
-                  Enviar
-                </Button>
+                <Flex alignItems={"center"} gap={4}>
+                  <Button
+                    type="submit"
+                    variant="solid"
+                    bgColor="primary"
+                    color="white"
+                    _hover={{
+                      bgColor: "secondary",
+                    }}
+                    width={{ base: "full", md: "auto" }}
+                    isDisabled={!captcha}
+                  >
+                    Enviar
+                  </Button>
 
-                <ReCAPTCHA
-                  sitekey={
-                    process.env.RECAPTCHA_SITE_KEY || "Your client site key"
-                  }
-                  onChange={setCaptcha}
-                />
+                  <ReCAPTCHA
+                    sitekey={
+                      process.env.RECAPTCHA_SITE_KEY || "Your client site key"
+                    }
+                    onChange={setCaptcha}
+                  />
+                </Flex>
               </FormControl>
             </VStack>
           </Box>
