@@ -1,4 +1,5 @@
 "use client";
+import useCustomToast from "@/hooks/useCustomToast";
 import {
   Box,
   Button,
@@ -19,6 +20,7 @@ import { BsPerson, BsTelephone } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 
 export default function FormContact() {
+  const { showToast } = useCustomToast();
   const [captcha, setCaptcha] = useState(null);
   const sendEmail = async (values) => {
     try {
@@ -36,9 +38,17 @@ export default function FormContact() {
         },
       });
       const data = await response.json();
-      console.log(data);
+      showToast(
+        "Consulta enviada!",
+        "Nos pondremos en contacto a la brevedad.",
+        "success"
+      );
     } catch (error) {
-      console.error(error);
+      showToast(
+        "Error al enviar consulta",
+        "Ocurrió un error al enviar la consulta. Por favor, intentá nuevamente.",
+        "error"
+      );
     }
   };
 
