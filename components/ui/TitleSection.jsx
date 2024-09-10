@@ -4,7 +4,7 @@ export default function TitleSection({ itemProp = null, children }) {
   return (
     <Center bgColor={"primary"} height={"60px"} my={4}>
       <Heading
-        as={"h2"}
+        as={"p"}
         fontSize={"3xl"}
         m={4}
         color={"white"}

@@ -14,13 +14,21 @@ import { FaAngleDown } from "react-icons/fa6";
 
 export default function NavbarDesktop() {
   return (
-    <ButtonGroup gap={2} as={"nav"}>
+    <ButtonGroup
+      gap={2}
+      as={"nav"}
+      itemscope="itemscope"
+      itemtype="http://schema.org/SiteNavigationElement"
+      role="navigation"
+    >
       <Button
         as={"a"}
         href="#"
         variant={"link"}
         color={"secondary"}
         fontWeight={"bold"}
+        aria-current="page"
+        itemprop="url"
       >
         Inicio
       </Button>
@@ -30,6 +38,8 @@ export default function NavbarDesktop() {
         variant={"link"}
         color={"secondary"}
         fontWeight={"bold"}
+        aria-current="page"
+        itemprop="url"
       >
         Sobre Nosotros
       </Button>
@@ -41,6 +51,8 @@ export default function NavbarDesktop() {
             variant={"link"}
             color={"secondary"}
             fontWeight={"bold"}
+            aria-current="page"
+            itemprop="url"
           >
             <Flex alignItems={"center"} gap={1}>
               Servicios
@@ -81,6 +93,8 @@ export default function NavbarDesktop() {
                   color: "secondary",
                   bgColor: "#403c9021",
                 }}
+                aria-current="page"
+                itemprop="url"
               >
                 ERP Calipso
               </Button>
@@ -97,6 +111,8 @@ export default function NavbarDesktop() {
                   color: "secondary",
                   bgColor: "#403c9021",
                 }}
+                aria-current="page"
+                itemprop="url"
               >
                 Sistema MES
               </Button>
@@ -113,6 +129,8 @@ export default function NavbarDesktop() {
                   color: "secondary",
                   bgColor: "#403c9021",
                 }}
+                aria-current="page"
+                itemprop="url"
               >
                 Software a medida
               </Button>
@@ -126,6 +144,8 @@ export default function NavbarDesktop() {
         variant={"link"}
         color={"secondary"}
         fontWeight={"bold"}
+        aria-current="page"
+        itemprop="url"
       >
         Clientes
       </Button>
@@ -135,6 +155,8 @@ export default function NavbarDesktop() {
         variant={"link"}
         color={"secondary"}
         fontWeight={"bold"}
+        aria-current="page"
+        itemprop="url"
       >
         Contacto
       </Button>

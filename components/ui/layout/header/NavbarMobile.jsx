@@ -33,6 +33,9 @@ export default function NavbarMobile({
           bgColor: "#403c9021",
         }}
         aria-label="Abrir menú de navegación"
+        itemscope="itemscope"
+        itemtype="http://schema.org/SiteNavigationElement"
+        role="navigation"
       >
         <FaBars />
       </Button>
@@ -80,6 +83,8 @@ export default function NavbarMobile({
                   color: "secondary",
                   bgColor: "#403c9021",
                 }}
+                aria-current="page"
+                itemprop="url"
               >
                 Inicio
               </Button>
@@ -96,6 +101,8 @@ export default function NavbarMobile({
                   color: "secondary",
                   bgColor: "#403c9021",
                 }}
+                aria-current="page"
+                itemprop="url"
               >
                 Sobre Nosotros
               </Button>
@@ -112,6 +119,8 @@ export default function NavbarMobile({
                 }}
                 justifyContent={"space-between"}
                 role="groupServicio"
+                aria-current="page"
+                itemprop="url"
               >
                 Servicios
                 <Box
@@ -152,6 +161,8 @@ export default function NavbarMobile({
                       color: "secondary",
                       bgColor: "#403c9021",
                     }}
+                    aria-current="page"
+                    itemprop="url"
                   >
                     ERP Calipso
                   </Button>
@@ -168,6 +179,8 @@ export default function NavbarMobile({
                       color: "secondary",
                       bgColor: "#403c9021",
                     }}
+                    aria-current="page"
+                    itemprop="url"
                   >
                     Sistema MES
                   </Button>
@@ -184,6 +197,8 @@ export default function NavbarMobile({
                       color: "secondary",
                       bgColor: "#403c9021",
                     }}
+                    aria-current="page"
+                    itemprop="url"
                   >
                     Software a medida
                   </Button>
@@ -202,6 +217,8 @@ export default function NavbarMobile({
                   color: "secondary",
                   bgColor: "#403c9021",
                 }}
+                aria-current="page"
+                itemprop="url"
               >
                 Clientes
               </Button>
@@ -218,6 +235,8 @@ export default function NavbarMobile({
                   color: "secondary",
                   bgColor: "#403c9021",
                 }}
+                aria-current="page"
+                itemprop="url"
               >
                 Contacto
               </Button>

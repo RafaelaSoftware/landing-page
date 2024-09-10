@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import ChakraProviderUI from "@/components/providers/ChakraProviderUI";
 
 export const metadata = {
@@ -19,6 +20,10 @@ export const metadata = {
   siteName: process.env.NEXT_PUBLIC_APP_NAME,
   type: "website",
   locale: "es_ES",
+  verification: {
+    google: process.env.GOOGLE_VERIFICATION_ID || 'your-google-verification-id-here',
+
+  },
 
 
   // Twitter
@@ -49,6 +54,7 @@ export default function RootLayout({ children }) {
         <ChakraProviderUI>
           {children}
         </ChakraProviderUI>
+        <Analytics />
       </body>
     </html>
   );

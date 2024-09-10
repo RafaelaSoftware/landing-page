@@ -123,7 +123,7 @@ export default function Services() {
       <Box bgColor={"tertiary"} py={10} mb={10}>
         <Container maxW={"container.lg"}>
           <Heading
-            as={"h5"}
+            as={"h4"}
             color={"secondary"}
             fontSize={{ base: "lg", md: "xl" }}
             width={"full"}
