@@ -44,6 +44,7 @@ export function ServicesArticle({
           color={"secondary"}
           fontWeight={"bold"}
           fontSize={{ base: "xs", md: "md" }}
+          as={"h3"}
         >
           {children}
         </Text>
@@ -72,7 +73,7 @@ export function ServicesArticle({
     >
       <Center bgColor={"secondary"} height={"60px"}>
         <Heading
-          as={"h3"}
+          as={"h2"}
           color={"white"}
           fontSize={{ base: "md", sm: "lg", md: "2xl" }}
           itemProp="serviceType" // Tipo de servicio
@@ -205,7 +206,9 @@ export function ServicesArticle({
                   }}
                 />
               </Box>
-              {btnLabel}
+              <Text as={"h3"} color={"white"}>
+                {btnLabel}
+              </Text>
             </Button>
           </Link>
         </Center>
