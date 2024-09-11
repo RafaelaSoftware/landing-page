@@ -172,10 +172,17 @@ export default function FormContact() {
                     Enviar
                   </Button>
 
-                  <ReCAPTCHA
-                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                    onChange={setCaptcha}
-                  />
+                  <Box
+                    maxW={"200px"}
+                    transform={{ base: "scale(0.5)", md: "scale(1)" }}
+                    transformOrigin={"left center"}
+                  >
+                    <ReCAPTCHA
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                      onChange={setCaptcha}
+                      size="normal"
+                    />
+                  </Box>
                 </Flex>
               </FormControl>
             </VStack>
