@@ -17,8 +17,8 @@ export default function NavbarDesktop() {
     <ButtonGroup
       gap={2}
       as={"nav"}
-      itemscope="itemscope"
-      itemtype="http://schema.org/SiteNavigationElement"
+      itemScope="itemscope"
+      itemType="http://schema.org/SiteNavigationElement"
       role="navigation"
     >
       <Button
@@ -28,7 +28,7 @@ export default function NavbarDesktop() {
         color={"secondary"}
         fontWeight={"bold"}
         aria-current="page"
-        itemprop="url"
+        itemProp="url"
       >
         Inicio
       </Button>
@@ -39,7 +39,7 @@ export default function NavbarDesktop() {
         color={"secondary"}
         fontWeight={"bold"}
         aria-current="page"
-        itemprop="url"
+        itemProp="url"
       >
         Sobre Nosotros
       </Button>
@@ -52,7 +52,7 @@ export default function NavbarDesktop() {
             color={"secondary"}
             fontWeight={"bold"}
             aria-current="page"
-            itemprop="url"
+            itemProp="url"
           >
             <Flex alignItems={"center"} gap={1}>
               Servicios
@@ -94,7 +94,7 @@ export default function NavbarDesktop() {
                   bgColor: "#403c9021",
                 }}
                 aria-current="page"
-                itemprop="url"
+                itemProp="url"
               >
                 ERP Calipso
               </Button>
@@ -112,7 +112,7 @@ export default function NavbarDesktop() {
                   bgColor: "#403c9021",
                 }}
                 aria-current="page"
-                itemprop="url"
+                itemProp="url"
               >
                 Sistema MES
               </Button>
@@ -130,7 +130,7 @@ export default function NavbarDesktop() {
                   bgColor: "#403c9021",
                 }}
                 aria-current="page"
-                itemprop="url"
+                itemProp="url"
               >
                 Software a medida
               </Button>
@@ -145,7 +145,7 @@ export default function NavbarDesktop() {
         color={"secondary"}
         fontWeight={"bold"}
         aria-current="page"
-        itemprop="url"
+        itemProp="url"
       >
         Clientes
       </Button>
@@ -156,7 +156,7 @@ export default function NavbarDesktop() {
         color={"secondary"}
         fontWeight={"bold"}
         aria-current="page"
-        itemprop="url"
+        itemProp="url"
       >
         Contacto
       </Button>
