@@ -129,9 +129,10 @@ export function ServicesArticle({
             pl={{ base: 0, md: isLeft && 4 }}
             pr={{ base: 0, md: !isLeft && 4 }}
             order={{ base: 2, md: isLeft ? 2 : 1 }}
+            gap={{ base: 8, md: 6 }}
           >
             <Box
-              lineHeight={8}
+              lineHeight={{ base: 10, md: 8 }}
               textAlign={"justify"}
               fontSize={{ base: "sm", md: "md" }}
               itemProp="description" // Descripción del servicio
@@ -153,7 +154,7 @@ export function ServicesArticle({
 
               <Flex
                 flexDirection={"column"}
-                gap={4}
+                gap={{ base: 6, md: 4 }}
                 pl={{ base: 1, md: isLeft && 4 }}
                 mr={{ base: 0, md: 0 }}
               >
