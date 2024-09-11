@@ -40,7 +40,7 @@ export const metadata = {
     type: "website",
     locale: "es_ES",
     url: process.env.NEXT_PUBLIC_APP_URL,
-    site_name: process.env.NEXT_PUBLIC_APP_NAME,
+    site_name: process.env.NEXT_PUBLIC_APP_NAME || "Rafaela Software S.A.",
     title: "Rafaela Software S.A. | Soluciones Tecnológicas Innovadoras",
     description: "Líderes en la provisión de software industrial y soluciones tecnológicas para la optimización de procesos productivos.",
     image: "/images/logo.png",
