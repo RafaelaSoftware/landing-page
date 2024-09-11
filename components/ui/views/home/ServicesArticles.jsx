@@ -84,7 +84,12 @@ export function ServicesArticle({
 
       <Container maxW={"container.xl"} py={10}>
         <Grid templateColumns={{ base: "1f", md: "1fr 1fr" }}>
-          <GridItem display={"flex"} flexDirection={"column"} gap={1}>
+          <GridItem
+            display={"flex"}
+            flexDirection={"column"}
+            gap={1}
+            order={{ base: 1, md: isLeft ? 1 : 2 }}
+          >
             <Image
               src={src}
               alt="Rafaela Software S.A. - Servicios"
