@@ -153,7 +153,11 @@ export default function FormContact() {
                 />
               </FormControl>
               <FormControl id="submit" float="right">
-                <Flex alignItems={"center"} gap={4}>
+                <Flex
+                  flexDirection={{ base: "column", md: "row" }}
+                  alignItems={"center"}
+                  gap={4}
+                >
                   <Button
                     type="submit"
                     variant="solid"
