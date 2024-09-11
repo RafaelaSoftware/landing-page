@@ -153,7 +153,11 @@ export default function FormContact() {
                 />
               </FormControl>
               <FormControl id="submit" float="right">
-                <Flex alignItems={"center"} gap={4}>
+                <Flex
+                  flexDirection={{ base: "column", md: "row" }}
+                  alignItems={"center"}
+                  gap={4}
+                >
                   <Button
                     type="submit"
                     variant="solid"
@@ -168,10 +172,17 @@ export default function FormContact() {
                     Enviar
                   </Button>
 
-                  <ReCAPTCHA
-                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                    onChange={setCaptcha}
-                  />
+                  <Box
+                    maxW={"200px"}
+                    transform={{ base: "scale(0.5)", md: "scale(1)" }}
+                    transformOrigin={"left center"}
+                  >
+                    <ReCAPTCHA
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                      onChange={setCaptcha}
+                      size="normal"
+                    />
+                  </Box>
                 </Flex>
               </FormControl>
             </VStack>

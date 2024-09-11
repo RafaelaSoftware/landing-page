@@ -76,7 +76,7 @@ export default function AboutUs() {
               base: 0,
               md: 8,
             }}
-            lineHeight={8}
+            lineHeight={{ base: 10, md: 8 }}
             fontSize={{ base: "sm", md: "md" }}
           >
             <VStack alignItems={"flex-start"}>

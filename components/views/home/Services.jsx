@@ -139,32 +139,41 @@ export default function Services() {
             gap={{ base: 2, md: 4 }}
             fontSize={{ base: "sm", md: "md" }}
           >
-            <GridItem display={"flex"} flexDirection={"column"} gap={2}>
-              <Text itemProp="additionalType">
+            <GridItem
+              display={"flex"}
+              flexDirection={"column"}
+              gap={{ base: 6, md: 4 }}
+              pr={{ base: 0, md: 4 }}
+            >
+              <Text itemProp="additionalType" textAlign={"justify"}>
                 - Data analytics, tableros administrativos o dashboards
               </Text>
               <Text>- Desarrollo de app móviles</Text>
 
-              <Text itemProp="additionalType">
+              <Text itemProp="additionalType" textAlign={"justify"}>
                 - Toma de datos por colectora: gestión de almacenes, toma física
                 de inventario, expedición, despacho de mercadería o recepción de
                 mercadería
               </Text>
 
-              <Text itemProp="additionalType">
+              <Text itemProp="additionalType" textAlign={"justify"}>
                 - Administración y gestión de pedidos y preventa
               </Text>
             </GridItem>
-            <GridItem display={"flex"} flexDirection={"column"} gap={2}>
-              <Text itemProp="additionalType">
+            <GridItem
+              display={"flex"}
+              flexDirection={"column"}
+              gap={{ base: 6, md: 4 }}
+            >
+              <Text itemProp="additionalType" textAlign={"justify"}>
                 - Integración con sistema de entes de regulación nacional y
                 provinciales
               </Text>
-              <Text itemProp="additionalType">
+              <Text itemProp="additionalType" textAlign={"justify"}>
                 - Integración con hardware o dispositivos externos:
                 caudalímetros, sensores y balanzas
               </Text>
-              <Text itemProp="additionalType">
+              <Text itemProp="additionalType" textAlign={"justify"}>
                 - Integración con sistemas de calidad y trazabilidad
               </Text>
             </GridItem>
