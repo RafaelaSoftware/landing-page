@@ -173,15 +173,22 @@ export default function FormContact() {
                   </Button>
 
                   <Box
-                    maxW={"200px"}
-                    transform={{ base: "scale(0.5)", md: "scale(1)" }}
-                    transformOrigin={"left center"}
+                    transform={{
+                      base: "translateX(-25px)",
+                      md: "translateX(0px)",
+                    }}
                   >
-                    <ReCAPTCHA
-                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                      onChange={setCaptcha}
-                      size="normal"
-                    />
+                    <Box
+                      maxW={"200px"}
+                      transform={{ base: "scale(0.5)", md: "scale(1)" }}
+                      transformOrigin={"center center"}
+                    >
+                      <ReCAPTCHA
+                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                        onChange={setCaptcha}
+                        size="normal"
+                      />
+                    </Box>
                   </Box>
                 </Flex>
               </FormControl>
