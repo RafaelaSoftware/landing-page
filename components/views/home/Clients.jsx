@@ -1,4 +1,11 @@
-import { Box, Container, Grid, GridItem } from "@chakra-ui/react";
+"use client";
+import {
+  Box,
+  Container,
+  Grid,
+  GridItem,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import TitleSection from "@/components/ui/TitleSection";
 import Image from "next/image";
 import { HEADER_HEIGHT } from "@/enums/config";
@@ -101,6 +108,10 @@ const clientImages = [
 ];
 
 export default function Clients() {
+  const isDesktop = useBreakpointValue({
+    base: false,
+    md: true,
+  });
   return (
     <Box
       id="clientes"
@@ -118,7 +129,8 @@ export default function Clients() {
           gap={4}
         >
           {clientImages.map((client) => {
-            if (client.name === "")
+            if (client.name === "" && !isDesktop) return null;
+            if (client.name === "" && isDesktop)
               return (
                 <GridItem
                   key={client.name}
