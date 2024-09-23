@@ -98,11 +98,6 @@ const clientImages = [
     src: "/images/clients/sodecar.png",
     link: "https://www.sodecar.com/",
   },
-  {
-    name: "BolsaFilm - BLF",
-    src: "/images/clients/bolsafilm.png",
-    link: "https://www.bolsafilm.com.ar/",
-  },
 ];
 
 export default function Clients() {
